@@ -1,0 +1,13 @@
+# Windows requirements actually used by this application
+
+Windows 10/11 x64 with a private writable application folder and permission to launch background processes. The existing XAMPP architecture is supported: its PHP executable can run Laravel, and a compatible MariaDB/MySQL service can be configured manually. Default evaluation setup uses supported SQLite (PDO SQLite with WAL/busy timeout), so MariaDB is not required for a single-user local copy. A database server alone does not run Python extraction, the queue, scheduler or React.
+
+PHP 8.2+ per composer.json; all bundled dependencies must pass vendor/composer/platform_check.php. Locally verified runtime: PHP 8.4.26. Enable ctype, curl, dom, fileinfo, filter, hash, mbstring, openssl, pdo_sqlite, session, tokenizer, xml and zip. Configure sufficient memory (512 MB is a practical starting point) and upload limits (25 MB/file, 100 MB/batch); local starter explicitly sets HTTP upload/post limits. Windows pcntl/posix are unavailable, so queue timeouts/operating resource limits are less robust than a certified managed host. Keep one local queue worker.
+
+Python 3.12 x64 with all packages pinned in document-processor/requirements-windows.lock.txt, including PyMuPDF/pdfplumber, Office/Excel readers, Pillow and RapidOCR ONNX Runtime. RapidOCR performs local OCR without a separately installed Tesseract executable. Tesseract is optional, not installed by this package. OCR/model/native DLL availability must be checked by documents:doctor and a scanned fixture, not assumed from file extensions. Microsoft VC++ runtime may be required by ONNX/native packages; use the package vendor's runtime guidance if loading fails.
+
+Node 22+ plus the bundled backend/pdf-renderer/node_modules. Microsoft Edge at the path selected during setup is used by Playwright for PDF rendering. Edge is not redistributed. A real PDF export must succeed before evaluation is accepted. React is prebuilt for same-origin /api; npm/Vite is not required to run it. npm/Composer are required only for rebuilding/updating dependencies that are not in the package.
+
+Allow space for package extraction, Python dependencies/models, private originals, extraction images, PDF exports and separate backups. Storage use scales with page/image counts; there is no measured universal RAM/disk capacity guarantee. Keep the host awake while jobs are queued. Local log-based email permits testing password setup only on a trusted machine; configure authorized SMTP separately if actual email delivery is needed.
+
+Bundled dependencies retain their license notices. Python/browser/runtime installers are separate prerequisites with their own terms. Review THIRD-PARTY-NOTICES.md; no blanket proprietary redistribution/license clearance is claimed.

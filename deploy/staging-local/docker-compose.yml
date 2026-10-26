@@ -1,0 +1,136 @@
+name: pentagon-stage8-local
+x-app: &app
+  image: pentagon-stage8-backend:local
+  environment: &env
+    STAGE8_CONTAINER: "1"
+    STAGE8_FIXTURE_PASSWORD: ${STAGE8_FIXTURE_PASSWORD:?Generate synthetic account password}
+    TEST_REFERENCE_DIR: /runtime/synthetic-sources
+    APP_NAME: Pentagon Stage8 Synthetic
+    APP_ENV: staging
+    APP_DEBUG: "false"
+    APP_KEY: ${STAGE8_APP_KEY:?Generate ignored staging credentials first}
+    APP_URL: https://localhost:8443
+    FRONTEND_URL: https://localhost:8443
+    SANCTUM_STATEFUL_DOMAINS: localhost:8443,localhost
+    SESSION_DOMAIN: null
+    SESSION_COOKIE: pentagon_stage8_session
+    SESSION_DRIVER: database
+    SESSION_SECURE_COOKIE: "true"
+    SESSION_ENCRYPT: "true"
+    CACHE_STORE: database
+    DB_CONNECTION: mysql
+    DB_HOST: mysql
+    DB_DATABASE: pentagon_stage8_local
+    DB_USERNAME: pentagon_stage8
+    DB_PASSWORD: ${STAGE8_DB_PASSWORD:?Generate staging password}
+    DB_QUEUE_RETRY_AFTER: "1200"
+    QUEUE_CONNECTION: database
+    LOCAL_PRIVATE_ROOT: /private
+    MAIL_MAILER: smtp
+    MAIL_HOST: mailpit
+    MAIL_PORT: "1025"
+    MAIL_FROM_ADDRESS: stage8@example.test
+    STAGE8_DISABLE_EXPORT_CLEANUP: "true"
+    PLAYWRIGHT_BROWSERS_PATH: /opt/ms-playwright
+  volumes:
+    - runtime:/app/backend/storage
+    - private:/private
+    - operations:/runtime
+  networks: [isolated]
+  init: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  mem_limit: 1536m
+  stop_grace_period: 1200s
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: pentagon_stage8_local
+      MYSQL_USER: pentagon_stage8
+      MYSQL_PASSWORD: ${STAGE8_DB_PASSWORD:?Generate staging password}
+      MYSQL_ROOT_PASSWORD: ${STAGE8_MYSQL_ROOT_PASSWORD:?Generate root staging password}
+    command: [--character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci]
+    volumes: [mysql:/var/lib/mysql]
+    networks: [isolated]
+    mem_limit: 1024m
+    healthcheck:
+      test: [CMD, mysqladmin, ping, -h, localhost, --silent]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  mailpit:
+    image: axllent/mailpit:latest
+    environment:
+      MP_SMTP_AUTH_ACCEPT_ANY: "1"
+      MP_SMTP_AUTH_ALLOW_INSECURE: "1"
+    ports: ["127.0.0.1:8028:8025"]
+    networks: [isolated]
+    mem_limit: 128m
+    healthcheck:
+      test: [CMD, /mailpit, readyz]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+  migrate:
+    <<: *app
+    command: [php, artisan, migrate, --force, --no-interaction]
+    depends_on:
+      mysql: {condition: service_healthy}
+  backend:
+    <<: *app
+    build: {context: ../.., dockerfile: deploy/staging-local/Dockerfile.backend}
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      mailpit: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, php, /app/ops/staging/container-health.php, database]
+      interval: 20s
+      timeout: 10s
+      retries: 5
+  worker:
+    <<: *app
+    image: pentagon-stage8-worker:local
+    build: {context: ../.., dockerfile: deploy/staging-local/Dockerfile.worker}
+    shm_size: 256m
+    depends_on:
+      backend: {condition: service_healthy}
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, php, /app/ops/staging/container-health.php, worker]
+      interval: 20s
+      timeout: 10s
+      start_period: 30s
+      retries: 5
+  scheduler:
+    <<: *app
+    command: [sh, /app/ops/staging/scheduler-container.sh]
+    depends_on:
+      backend: {condition: service_healthy}
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, php, /app/ops/staging/container-health.php, scheduler]
+      interval: 30s
+      timeout: 10s
+      start_period: 65s
+      retries: 5
+  web:
+    build: {context: ../.., dockerfile: deploy/staging-local/Dockerfile.frontend}
+    ports: ["127.0.0.1:8088:80", "127.0.0.1:8443:443"]
+    networks: [isolated]
+    depends_on:
+      backend: {condition: service_healthy}
+    mem_limit: 128m
+    healthcheck:
+      test: [CMD-SHELL, "wget --no-check-certificate -q -O /dev/null https://127.0.0.1/up"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+networks:
+  isolated:
+    internal: true
+volumes:
+  mysql:
+  runtime:
+  private:
+  operations:

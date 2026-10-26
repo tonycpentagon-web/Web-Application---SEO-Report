@@ -1,0 +1,112 @@
+{
+  "publication_version": 4,
+  "pages": 20,
+  "outsidePageText": [],
+  "missingKeywords": [],
+  "removedStandaloneSummary": true,
+  "removedStandaloneSources": true,
+  "actualCoveragePrinted": true,
+  "images": 8,
+  "pageInfo": [
+    {
+      "page": 1,
+      "characters": 1299,
+      "images": 0
+    },
+    {
+      "page": 2,
+      "characters": 1339,
+      "images": 0
+    },
+    {
+      "page": 3,
+      "characters": 1310,
+      "images": 0
+    },
+    {
+      "page": 4,
+      "characters": 1978,
+      "images": 0
+    },
+    {
+      "page": 5,
+      "characters": 1149,
+      "images": 0
+    },
+    {
+      "page": 6,
+      "characters": 2498,
+      "images": 0
+    },
+    {
+      "page": 7,
+      "characters": 3234,
+      "images": 0
+    },
+    {
+      "page": 8,
+      "characters": 2926,
+      "images": 0
+    },
+    {
+      "page": 9,
+      "characters": 4334,
+      "images": 0
+    },
+    {
+      "page": 10,
+      "characters": 2793,
+      "images": 0
+    },
+    {
+      "page": 11,
+      "characters": 3378,
+      "images": 0
+    },
+    {
+      "page": 12,
+      "characters": 1584,
+      "images": 0
+    },
+    {
+      "page": 13,
+      "characters": 635,
+      "images": 1
+    },
+    {
+      "page": 14,
+      "characters": 416,
+      "images": 1
+    },
+    {
+      "page": 15,
+      "characters": 803,
+      "images": 2
+    },
+    {
+      "page": 16,
+      "characters": 822,
+      "images": 2
+    },
+    {
+      "page": 17,
+      "characters": 424,
+      "images": 1
+    },
+    {
+      "page": 18,
+      "characters": 848,
+      "images": 1
+    },
+    {
+      "page": 19,
+      "characters": 3584,
+      "images": 0
+    },
+    {
+      "page": 20,
+      "characters": 770,
+      "images": 0
+    }
+  ]
+}

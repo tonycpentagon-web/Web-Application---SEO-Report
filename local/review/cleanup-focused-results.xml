@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="D:\xampp\htdocs\pentagon-insight-flow\backend\phpunit.xml" tests="9" assertions="136" errors="0" failures="0" skipped="0" time="2.194207">
+    <testsuite name="Feature" tests="9" assertions="136" errors="0" failures="0" skipped="0" time="2.194207">
+      <testsuite name="Tests\Feature\ClientTestDataCleanupTest" file="D:\xampp\htdocs\pentagon-insight-flow\backend\tests\Feature\ClientTestDataCleanupTest.php" tests="9" assertions="136" errors="0" failures="0" skipped="0" time="2.194207">
+        <testcase name="test_dry_run_is_read_only_and_privileged_local_guard_fails_closed" file="D:\xampp\htdocs\pentagon-insight-flow\backend\tests\Feature\ClientTestDataCleanupTest.php" line="46" class="Tests\Feature\ClientTestDataCleanupTest" classname="Tests.Feature.ClientTestDataCleanupTest" assertions="8" time="0.280693"/>
+        <testcase name="test_verified_backup_cleanup_preserves_accounts_unrelated_files_and_new_data_on_repeat" file="D:\xampp\htdocs\pentagon-insight-flow\backend\tests\Feature\ClientTestDataCleanupTest.php" line="56" class="Tests\Feature\ClientTestDataCleanupTest" classname="Tests.Feature.ClientTestDataCleanupTest" assertions="46" time="0.156056"/>
+        <testcase name="test_changed_dataset_and_corrupted_backup_prevent_any_deletion" file="D:\xampp\htdocs\pentagon-insight-flow\backend\tests\Feature\ClientTestDataCleanupTest.php" line="74" class="Tests\Feature\ClientTestDataCleanupTest" classname="Tests.Feature.ClientTestDataCleanupTest" assertions="6" time="0.119355"/>
+        <testcase name="test_empty_cleanup_backup_is_valid_and_unsafe_paths_are_refused" file="D:\xampp\htdocs\pentagon-insight-flow\backend\tests\Feature\ClientTestDataCleanupTest.php" line="84" class="Tests\Feature\ClientTestDataCleanupTest" classname="Tests.Feature.ClientTestDataCleanupTest" assertions="8" time="0.111218"/>
+        <testcase name="test_cleanup_of_generated_report_removes_foreign_key_cycles_and_public_access" file="D:\xampp\htdocs\pentagon-insight-flow\backend\tests\Feature\ClientTestDataCleanupTest.php" line="90" class="Tests\Feature\ClientTestDataCleanupTest" classname="Tests.Feature.ClientTestDataCleanupTest" assertions="42" time="1.041206"/>
+        <testcase name="test_only_report_jobs_and_client_specific_retained_audits_are_selected" file="D:\xampp\htdocs\pentagon-insight-flow\backend\tests\Feature\ClientTestDataCleanupTest.php" line="113" class="Tests\Feature\ClientTestDataCleanupTest" classname="Tests.Feature.ClientTestDataCleanupTest" assertions="7" time="0.152876"/>
+        <testcase name="test_processing_or_reserved_jobs_block_backup_and_changes_to_files_block_deletion" file="D:\xampp\htdocs\pentagon-insight-flow\backend\tests\Feature\ClientTestDataCleanupTest.php" line="130" class="Tests\Feature\ClientTestDataCleanupTest" classname="Tests.Feature.ClientTestDataCleanupTest" assertions="5" time="0.123331"/>
+        <testcase name="test_partial_file_failure_is_reported_and_retry_does_not_repeat_database_deletion" file="D:\xampp\htdocs\pentagon-insight-flow\backend\tests\Feature\ClientTestDataCleanupTest.php" line="140" class="Tests\Feature\ClientTestDataCleanupTest" classname="Tests.Feature.ClientTestDataCleanupTest" assertions="10" time="0.141489"/>
+        <testcase name="test_job_and_cleanup_locks_exclude_each_other" file="D:\xampp\htdocs\pentagon-insight-flow\backend\tests\Feature\ClientTestDataCleanupTest.php" line="157" class="Tests\Feature\ClientTestDataCleanupTest" classname="Tests.Feature.ClientTestDataCleanupTest" assertions="4" time="0.067986"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

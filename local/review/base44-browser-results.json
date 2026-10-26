@@ -1,0 +1,87 @@
+{
+  "results": [
+    {
+      "client": "advanced",
+      "width": 1440,
+      "sevenSections": true,
+      "overflow": false
+    },
+    {
+      "client": "advanced",
+      "width": 768,
+      "sevenSections": true,
+      "overflow": false
+    },
+    {
+      "client": "advanced",
+      "width": 390,
+      "sevenSections": true,
+      "overflow": false
+    },
+    {
+      "client": "hanns",
+      "width": 1440,
+      "sevenSections": true,
+      "overflow": false
+    },
+    {
+      "client": "hanns",
+      "width": 768,
+      "sevenSections": true,
+      "overflow": false
+    },
+    {
+      "client": "hanns",
+      "width": 390,
+      "sevenSections": true,
+      "overflow": false
+    },
+    {
+      "client": "advanced",
+      "privatePreview": true,
+      "width": 1440,
+      "sevenSections": true,
+      "overflow": false
+    },
+    {
+      "client": "advanced",
+      "privatePreview": true,
+      "width": 768,
+      "sevenSections": true,
+      "overflow": false
+    },
+    {
+      "client": "advanced",
+      "privatePreview": true,
+      "width": 390,
+      "sevenSections": true,
+      "overflow": false
+    },
+    {
+      "client": "skyhub",
+      "privatePreview": true,
+      "width": 1440,
+      "sevenSections": true,
+      "overflow": false
+    },
+    {
+      "client": "skyhub",
+      "privatePreview": true,
+      "width": 768,
+      "sevenSections": true,
+      "overflow": false
+    },
+    {
+      "client": "skyhub",
+      "privatePreview": true,
+      "width": 390,
+      "sevenSections": true,
+      "overflow": false
+    }
+  ],
+  "oldAdvancedLinkUnchanged": true,
+  "noPublicConsoleErrors": true,
+  "noUncaughtErrors": true,
+  "keywordSearchSortFilter": true,
+  "allImageDialogs": true
+}

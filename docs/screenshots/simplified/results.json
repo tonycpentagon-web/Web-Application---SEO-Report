@@ -1,0 +1,146 @@
+{
+  "fixture": "Synthetic records extracted and published by the isolated Laravel integration test; browser API interception used for visual checks.",
+  "checks": [
+    {
+      "view": "overview",
+      "device": "desktop",
+      "viewport": 1440,
+      "width": 1440,
+      "title": "Your monthly reporting workspace"
+    },
+    {
+      "view": "generate",
+      "device": "desktop",
+      "viewport": 1440,
+      "width": 1440,
+      "title": "Generate SEO Report"
+    },
+    {
+      "view": "preview",
+      "device": "desktop",
+      "viewport": 1440,
+      "width": 1440,
+      "title": "SEO Performance Report ·August 2026"
+    },
+    {
+      "view": "sharing",
+      "device": "desktop",
+      "viewport": 1440,
+      "width": 1440,
+      "title": "Share Report"
+    },
+    {
+      "view": "public",
+      "device": "desktop",
+      "viewport": 1440,
+      "width": 1440,
+      "title": "SEO Performance Report ·August 2026"
+    },
+    {
+      "view": "history",
+      "device": "desktop",
+      "viewport": 1440,
+      "width": 1440,
+      "title": "Monthly Reports"
+    },
+    {
+      "view": "overview",
+      "device": "tablet",
+      "viewport": 768,
+      "width": 768,
+      "title": "Your monthly reporting workspace"
+    },
+    {
+      "view": "generate",
+      "device": "tablet",
+      "viewport": 768,
+      "width": 768,
+      "title": "Generate SEO Report"
+    },
+    {
+      "view": "preview",
+      "device": "tablet",
+      "viewport": 768,
+      "width": 768,
+      "title": "SEO Performance Report ·August 2026"
+    },
+    {
+      "view": "sharing",
+      "device": "tablet",
+      "viewport": 768,
+      "width": 768,
+      "title": "Share Report"
+    },
+    {
+      "view": "public",
+      "device": "tablet",
+      "viewport": 768,
+      "width": 768,
+      "title": "SEO Performance Report ·August 2026"
+    },
+    {
+      "view": "history",
+      "device": "tablet",
+      "viewport": 768,
+      "width": 768,
+      "title": "Monthly Reports"
+    },
+    {
+      "view": "overview",
+      "device": "mobile",
+      "viewport": 390,
+      "width": 390,
+      "title": "Your monthly reporting workspace"
+    },
+    {
+      "view": "generate",
+      "device": "mobile",
+      "viewport": 390,
+      "width": 390,
+      "title": "Generate SEO Report"
+    },
+    {
+      "view": "preview",
+      "device": "mobile",
+      "viewport": 390,
+      "width": 390,
+      "title": "SEO Performance Report ·August 2026"
+    },
+    {
+      "view": "sharing",
+      "device": "mobile",
+      "viewport": 390,
+      "width": 390,
+      "title": "Share Report"
+    },
+    {
+      "view": "public",
+      "device": "mobile",
+      "viewport": 390,
+      "width": 390,
+      "title": "SEO Performance Report ·August 2026"
+    },
+    {
+      "view": "history",
+      "device": "mobile",
+      "viewport": 390,
+      "width": 390,
+      "title": "Monthly Reports"
+    },
+    {
+      "action": "single acknowledgment and share link UI",
+      "passed": true
+    },
+    {
+      "view": "employee-overview",
+      "device": "desktop",
+      "adminNavigation": false
+    },
+    {
+      "view": "employee-overview",
+      "device": "mobile",
+      "adminNavigation": false
+    }
+  ],
+  "errors": []
+}

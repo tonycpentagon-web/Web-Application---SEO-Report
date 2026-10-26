@@ -1,0 +1,56 @@
+{
+  "referenceTitle": "Hann's Pharmacy — SEO Performance Report | August 2026",
+  "referenceHasReport": true,
+  "sourceRanges": [
+    {
+      "status": "exact",
+      "ranges": [
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-31"
+        }
+      ]
+    },
+    {
+      "status": "exact",
+      "ranges": [
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-31"
+        }
+      ]
+    },
+    {
+      "status": "partial",
+      "ranges": [
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-30"
+        }
+      ]
+    },
+    {
+      "status": "exact",
+      "ranges": [
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-31"
+        }
+      ]
+    },
+    {
+      "status": "uncertain",
+      "ranges": [
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-30"
+        }
+      ]
+    }
+  ],
+  "coverPeriod": "SOURCE PERIODS (SOME DATES UNCONFIRMED)\n1 Aug 2026 – 30 Aug 2026; 1 Aug 2026 – 31 Aug 2026",
+  "noUncaughtErrors": true,
+  "extraCoverPanelsRemoved": true,
+  "sevenReportSectionsPreserved": true,
+  "mobileOverflow": false
+}

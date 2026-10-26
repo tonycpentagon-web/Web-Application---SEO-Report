@@ -1,0 +1,4 @@
+﻿<?php
+require __DIR__.'/../../backend/vendor/autoload.php';$app=require __DIR__.'/../../backend/bootstrap/app.php';$app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
+$p=App\Models\ReportingPeriod::findOrFail('01m5cc50zfzk56dwfc9ft9erb6');$a=app(App\Services\SimplifiedReportSharing::class)->assess($p);$v=app(App\Services\EvidenceValidation::class)->current($p);file_put_contents(__DIR__.'/hanns-current-sharing.json',json_encode(['report'=>$p->toArray(),'assessment'=>$a],JSON_PRETTY_PRINT));
+echo json_encode(['version'=>$p->version,'status'=>$p->status,'eligible'=>$a['eligible'],'blockers'=>$a['blockers'],'current_validation'=>$v['current'],'counts'=>$v['summary']['counts'],'periods'=>collect($a['source_periods'])->map(fn($d)=>['document'=>$d['document'],'status'=>$d['status'],'ranges'=>$d['ranges'],'uncovered_dates'=>$d['uncovered_dates']])],JSON_PRETTY_PRINT);

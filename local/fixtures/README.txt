@@ -1,0 +1,1 @@
+All values and names in this folder are SYNTHETIC TEST DATA, not real client performance. October 2026 fixtures exercise raster OCR, scanned PDF, Excel and CSV alongside the synthetic August/September PDFs under backend/tests/fixtures/monthly. Never copy these values into Hann's Pharmacy reports.

@@ -1,0 +1,8 @@
+import {useState} from 'react';
+import {useApi} from '../lib/use-api';
+import type {Page} from '../types';
+import {PageHeading,Loading,ErrorState,Empty} from '../components/common';
+import {Pager} from '../components/workspace';
+import {LifecycleActions} from '../components/lifecycle-actions';
+type Kind='client'|'project'|'report'|'document';
+export function TrashPage(){const [type,setType]=useState<Kind>('report'),[page,setPage]=useState(1);const q=useApi<Page<{id:string;type:Kind;name:string;deleted_at:string;purge_after:string}>>('/api/trash?type='+type+'&page='+page);return <><PageHeading title="Trash" eyebrow="ADMINISTRATION" description="Restore unwanted deletions during retention. Restore clients and projects before their children. Restoring does not reactivate revoked report links."/><section className="panel form-panel"><label>Items in Trash<select value={type} onChange={e=>{setType(e.target.value as Kind);setPage(1);}}><option value="client">Clients</option><option value="project">SEO Projects</option><option value="report">Monthly Reports</option><option value="document">Source Documents</option></select></label>{q.loading?<Loading/>:q.error||!q.data?<ErrorState message={q.error} retry={q.reload}/>:<>{!q.data.data.length?<Empty title="Trash is empty">No permitted items of this type are in Trash.</Empty>:<ul className="record-list">{q.data.data.map(m=><li key={m.id}><strong>{m.name}</strong><small>Moved to Trash {new Date(m.deleted_at).toLocaleString()}. Retention ends {new Date(m.purge_after).toLocaleString()}.</small><LifecycleActions type={type} id={m.id} trashed done={q.reload}/></li>)}</ul>}<Pager page={q.data} onPage={setPage}/></>}</section></>;}

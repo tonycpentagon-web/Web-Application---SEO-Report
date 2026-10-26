@@ -1,0 +1,10 @@
+﻿from pathlib import Path
+p=Path('frontend/src/components/published-dashboard.tsx');s=p.read_text(encoding='utf-8');s="import {ReportSourceCoverage,type SourceCoverage} from './report-source-coverage';\n"+s;s=s.replace('export type PublishedSnapshot={','export type PublishedSnapshot={source_periods?:SourceCoverage[];');s=s.replace('<div className="report-cover-actions">','<ReportSourceCoverage periods={d.source_periods}/><div className="report-cover-actions">');p.write_text(s,encoding='utf-8')
+p=Path('frontend/src/lib/report-dashboard.ts');s=p.read_text(encoding='utf-8');s="import type {SourceCoverage} from '../components/report-source-coverage';\n"+s;s=s.replace('export type ReportDashboardData={','export type ReportDashboardData={source_periods?:SourceCoverage[];');p.write_text(s,encoding='utf-8')
+p=Path('frontend/src/pages/report-draft-preview.tsx');s=p.read_text(encoding='utf-8');s="import {ReportSourceCoverage} from '../components/report-source-coverage';\n"+s;s=s.replace('<div className="report-cover-actions">','<ReportSourceCoverage periods={d.source_periods}/><div className="report-cover-actions">');p.write_text(s,encoding='utf-8')
+p=Path('backend/resources/views/reports/pdf.blade.php');s=p.read_text(encoding='utf-8');needle="    @if(!empty($d['disclosures']))";idx=s.index(needle)
+s=s[:idx]+'''    @if(!empty($d['source_periods']))
+    @php $limited=collect($d['source_periods'])->whereIn('status',['partial','uncertain']); @endphp
+    @if($limited->isNotEmpty())<div class="notice"><strong>Partial or uncertain source coverage</strong><p>Totals retain their printed coverage. Missing days are not estimated or presented as a complete month.</p><ul>@foreach($limited as $source)<li>{{ $source['document'] }}: @foreach($source['ranges'] as $range){{ $range['start'] }} to {{ $range['end'] }}; @endforeach @if(!empty($source['uncovered_dates']))Not covered by this range: {{ implode(', ', $source['uncovered_dates']) }}.@endif @if($source['status']==='uncertain') Date extraction is uncertain; employee assignment does not verify OCR values.@endif</li>@endforeach</ul></div>@endif
+    @endif
+'''+s[idx:];p.write_text(s,encoding='utf-8')

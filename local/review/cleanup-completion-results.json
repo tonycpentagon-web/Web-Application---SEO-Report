@@ -1,0 +1,35 @@
+{
+  "completed_at": "2026-10-22T10:30:33+00:00",
+  "successful": true,
+  "deleted_database_rows": 34753,
+  "deleted_files": 1732,
+  "deleted_bytes": 102476413,
+  "pending_files": 0,
+  "failures": [],
+  "remaining_client_related_rows": 0,
+  "remaining_managed_files": 0,
+  "old_public_links_returning_404": 8,
+  "old_public_pdf_links_returning_404": 8,
+  "dashboard_counters": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "empty_pages_verified": 7,
+  "administrator_authenticated": true,
+  "protected_tables_unchanged": {
+    "users": true,
+    "migrations": true,
+    "password_reset_tokens": true,
+    "personal_access_tokens": true
+  },
+  "schema_unchanged": true,
+  "backup": "D:/pentagon-insight-flow-backups/20261022-102130-01m5hj2mkk47gp56mmxc7g9rdg",
+  "backups_preserved": true,
+  "database_integrity": "ok",
+  "foreign_key_violations": 0,
+  "replacement_records_created": false,
+  "temporary_verification_session_revoked": true
+}

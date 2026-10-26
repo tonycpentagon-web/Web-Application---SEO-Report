@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "width": 1440,
+      "sections": [
+        "report-overview",
+        "report-website",
+        "report-gsc",
+        "report-keywords",
+        "report-activities",
+        "report-ai",
+        "report-events",
+        "report-summary",
+        "report-sources"
+      ],
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "sections": [
+        "report-overview",
+        "report-website",
+        "report-gsc",
+        "report-keywords",
+        "report-activities",
+        "report-ai",
+        "report-events",
+        "report-summary",
+        "report-sources"
+      ],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "sections": [
+        "report-overview",
+        "report-website",
+        "report-gsc",
+        "report-keywords",
+        "report-activities",
+        "report-ai",
+        "report-events",
+        "report-summary",
+        "report-sources"
+      ],
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "anonymousPrivateAccess": 401,
+  "reportRemainsDraft": true
+}

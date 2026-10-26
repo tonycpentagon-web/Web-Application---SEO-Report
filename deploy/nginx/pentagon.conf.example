@@ -1,0 +1,57 @@
+server {
+    listen 80;
+    server_name reports.your-domain.invalid;
+    return 301 https://$host$request_uri;
+}
+server {
+    listen 443 ssl;
+    server_name reports.your-domain.invalid;
+    ssl_certificate /etc/letsencrypt/live/reports.your-domain.invalid/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/reports.your-domain.invalid/privkey.pem;
+    root /srv/pentagon/current/frontend/dist;
+    index index.html;
+    client_max_body_size 110m;
+    server_tokens off;
+    add_header Strict-Transport-Security "max-age=31536000" always;
+    add_header X-Content-Type-Options nosniff always;
+    add_header X-Frame-Options DENY always;
+    add_header Referrer-Policy origin always;
+    add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
+    add_header X-Robots-Tag "noindex, nofollow, noarchive" always;
+    # Blob objects are required by the authenticated original-PDF preview. No remote scripts/fonts.
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; object-src blob:; frame-src blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'" always;
+    access_log /var/log/nginx/pentagon-access.log;
+    error_log /var/log/nginx/pentagon-error.log warn;
+    # Do not add request headers, bodies, Authorization or X-Report-Token to log formats.
+    location ~ /\.(?!well-known/) { deny all; }
+    location ~ ^/(backend|storage|reference-files|design-reference|\.tools)(/|$) { return 404; }
+    location ~ ^/(api|sanctum)(/|$) {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME /srv/pentagon/current/backend/public/index.php;
+        fastcgi_param SCRIPT_NAME /index.php;
+        fastcgi_param HTTPS on;
+        fastcgi_pass unix:/run/php/php8.4-fpm.sock;
+        fastcgi_read_timeout 90s;
+    }
+    location ~ ^/(login|forgot-password|reset-password)$ {
+        # GET/HEAD display React pages; POST uses existing Laravel CSRF/session routes.
+        if ($request_method ~ ^(GET|HEAD)$) { rewrite ^ /index.html last; }
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME /srv/pentagon/current/backend/public/index.php;
+        fastcgi_param SCRIPT_NAME /index.php;
+        fastcgi_param HTTPS on;
+        fastcgi_pass unix:/run/php/php8.4-fpm.sock;
+        fastcgi_read_timeout 90s;
+    }
+    location ~ ^/(logout|password|up)$ {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME /srv/pentagon/current/backend/public/index.php;
+        fastcgi_param SCRIPT_NAME /index.php;
+        fastcgi_param HTTPS on;
+        fastcgi_pass unix:/run/php/php8.4-fpm.sock;
+        fastcgi_read_timeout 90s;
+    }
+    location ~ \.php(?:/|$) { return 404; }
+    location /assets/ { try_files $uri =404; }
+    location / { try_files $uri $uri/ /index.html; }
+}

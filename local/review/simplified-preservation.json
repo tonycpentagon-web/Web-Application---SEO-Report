@@ -1,0 +1,1 @@
+{"tables_compared": 43, "changed_business_tables": [], "user_account_fields_preserved": true, "excluded_runtime_changes": ["sessions/cache/jobs", "worker_heartbeats", "users.updated_at/last_login_at"]}

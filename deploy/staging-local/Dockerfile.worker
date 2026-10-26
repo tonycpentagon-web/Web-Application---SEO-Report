@@ -1,0 +1,3 @@
+FROM pentagon-stage8-backend:local
+# Identical runtime/dependencies; only the process role differs.
+CMD ["php", "artisan", "queue:work", "database", "--queue=documents,exports", "--tries=1", "--timeout=960", "--memory=512", "--sleep=2"]

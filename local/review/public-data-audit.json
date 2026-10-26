@@ -1,0 +1,177 @@
+{
+  "keyword_rankings": {
+    "original_rows": 70,
+    "distinct": 69,
+    "repeats": [
+      {
+        "data": {
+          "category": "additional",
+          "exact_position": null,
+          "group": "page_1",
+          "keyword": "Fertility Pharmacies Virginia",
+          "page_group": 1,
+          "ranking_date": null,
+          "ranking_label": "1st Page",
+          "search_location": null
+        },
+        "occurrences": [
+          {
+            "id": "01m5ccagjx3hhmfqedwfng7ve7",
+            "serial": "7"
+          },
+          {
+            "id": "01m5ccagk41sjfspn9v8t814m3",
+            "serial": "14"
+          }
+        ]
+      }
+    ],
+    "categories": {
+      "primary": 20,
+      "additional": 49
+    }
+  },
+  "seo_activities": {
+    "original_rows": 95,
+    "distinct": 93,
+    "repeats": [
+      {
+        "data": {
+          "category": "social_bookmarking",
+          "url": "https://socialwebconsult.com/story7402202/fertility-pharmacy-fertility-medication-pharmacy-online-fertility-pharmacy"
+        },
+        "occurrences": [
+          {
+            "id": "01m5ccagwef2yer2x8xxjwzr20",
+            "serial": "18"
+          },
+          {
+            "id": "01m5ccagwgdnbd08cctd90qjmw",
+            "serial": "19"
+          }
+        ]
+      },
+      {
+        "data": {
+          "category": "social_bookmarking",
+          "url": "https://socialtechnet.com/story7541129/pharmacy-medication-compounding-compounding-medications-pharmacy-compounding-pharmacies-in-virginia"
+        },
+        "occurrences": [
+          {
+            "id": "01m5ccagwzpdrt8e721dkb1qbj",
+            "serial": "26"
+          },
+          {
+            "id": "01m5ccagx0jv7b6c819es7ngzg",
+            "serial": "27"
+          }
+        ]
+      }
+    ],
+    "categories": {
+      "article_submission": 10,
+      "profile_creation": 30,
+      "guest_post": 10,
+      "social_bookmarking": 28,
+      "ppt_submission": 10,
+      "image_submission": 5
+    }
+  },
+  "images": [
+    {
+      "query": "Fertility Pharmacy",
+      "matches": [
+        {
+          "source_page": 2,
+          "asset_index": 3,
+          "checksum": "a6efc3560a537bb59f3851f9f09cd685cb2bc24145c7631b4319dea4a94569b9"
+        }
+      ]
+    },
+    {
+      "query": "Fertility Specialty Pharmacy in Virginia",
+      "matches": [
+        {
+          "source_page": 2,
+          "asset_index": 4,
+          "checksum": "90b85d0303f1bf37a9e0df4a45ea134ebc760e1abf02dd00dffd8f019ac66b75"
+        }
+      ]
+    },
+    {
+      "query": "Fertility Medication Pharmacy",
+      "matches": [
+        {
+          "source_page": 3,
+          "asset_index": 6,
+          "checksum": "eb966cc85df6cf530e82b81bc71470cebff593a627032db0c4943610b2fbf25e"
+        }
+      ]
+    },
+    {
+      "query": "Best Fertility Pharmacy",
+      "matches": [
+        {
+          "source_page": 3,
+          "asset_index": 7,
+          "checksum": "972aab7dedfc5813e1206b29eda05593c7abb1c0b8c87d81eeccb327f6a068ff"
+        }
+      ]
+    },
+    {
+      "query": "Fertility Meds Pharmacy",
+      "matches": [
+        {
+          "source_page": 4,
+          "asset_index": 9,
+          "checksum": "b2111299d75dece8e388f90c535b534d2ee03af78c51df67afa5c87560c85e48"
+        }
+      ]
+    },
+    {
+      "query": "Fertility Medication Compounding",
+      "matches": [
+        {
+          "source_page": 4,
+          "asset_index": 10,
+          "checksum": "d334a3ed4df971761f6aad7925a42b572ef20bcc86bc692a27f062b9855b771c"
+        }
+      ]
+    },
+    {
+      "query": "Best Pharmacy for Compounded Medications",
+      "matches": [
+        {
+          "source_page": 5,
+          "asset_index": 12,
+          "checksum": "37f5c775095a07e5b3a535186dff77c6395b11fc9a87e4c30c76404f7d0755f5"
+        }
+      ]
+    },
+    {
+      "query": "Compounding Pharmacies in Virginia",
+      "matches": [
+        {
+          "source_page": 5,
+          "asset_index": 13,
+          "checksum": "a2b94234780addbbf439e9af56b6b7e2d185bf17a06d36df8d1ae77ae4fe6ec2"
+        }
+      ]
+    },
+    {
+      "query": "Compounded Fertility Medications Virginia",
+      "matches": [
+        {
+          "source_page": 6,
+          "asset_index": 15,
+          "checksum": "a91f85fef0ee439fa7f36ec59cbf9ebd8079fdd0a801f9050f850fb9407b28d1"
+        }
+      ]
+    }
+  ],
+  "ranking_labels": {
+    "1st Page": 66,
+    "2nd Page": 1,
+    "3rd Page": 2
+  }
+}

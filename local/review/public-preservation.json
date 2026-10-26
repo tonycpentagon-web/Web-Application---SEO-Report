@@ -1,0 +1,17 @@
+{
+  "clients": true,
+  "projects": true,
+  "report_documents": true,
+  "document_extracted_content": true,
+  "document_assets": true,
+  "normalized_records": true,
+  "metric_source_references": true,
+  "record_corrections": true,
+  "record_verifications": true,
+  "report_summary_revisions": true,
+  "report_source_scope_verifications": true,
+  "other_reports": true,
+  "existing_publications": true,
+  "all_original_files_match_checksums": true,
+  "original_document_count": 20
+}

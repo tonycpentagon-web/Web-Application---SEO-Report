@@ -1,0 +1,72 @@
+{
+  "backup": "D:\\pentagon-insight-flow-backups\\20261022-102130-01m5hj2mkk47gp56mmxc7g9rdg",
+  "database_integrity": "ok",
+  "foreign_key_violations": 0,
+  "archive_crc": "ok",
+  "sha256_verified_files": 1732,
+  "preserved_user_accounts": 1,
+  "initial_counts": {
+    "report_share_links": 8,
+    "report_shares": 0,
+    "report_pdf_exports": 23,
+    "report_delivery_events": 118,
+    "report_manager_approvals": 0,
+    "report_summary_approvals": 1,
+    "record_validation_results": 11792,
+    "record_verifications": 6,
+    "record_corrections": 42,
+    "bulk_review_requests": 2,
+    "validation_warnings": 362,
+    "metric_source_references": 6214,
+    "report_source_scope_verifications": 6,
+    "report_generations": 10,
+    "normalized_records": 5822,
+    "report_sections": 40,
+    "report_summary_revisions": 9,
+    "report_validation_runs": 11,
+    "normalization_runs": 14,
+    "document_assets": 1648,
+    "document_extracted_content": 8395,
+    "document_extraction_runs": 38,
+    "report_documents": 25,
+    "project_activity_logs": 135,
+    "report_publications": 6,
+    "reporting_periods": 5,
+    "project_memberships": 0,
+    "projects": 5,
+    "client_memberships": 0,
+    "clients": 3,
+    "retained_lifecycle_events": 10,
+    "jobs": 0,
+    "failed_jobs": 3,
+    "private_file_removals": 0
+  },
+  "states": {
+    "clients": {
+      "total": 3,
+      "trashed": 0,
+      "archived": 0
+    },
+    "projects": {
+      "total": 5,
+      "trashed": 2,
+      "archived": 0
+    },
+    "reporting_periods": {
+      "total": 5,
+      "trashed": 0,
+      "archived": 0
+    }
+  },
+  "file_bytes": 102476413,
+  "confirmation": "DELETE ALL CLIENT TEST DATA a6dbc9a2006d",
+  "live_deletion_performed": false,
+  "tests": {
+    "laravel_passed": 189,
+    "laravel_skipped": 1,
+    "focused_cleanup_passed": 9,
+    "react_passed": 122,
+    "typescript": "passed"
+  },
+  "final_fingerprint_unchanged": true
+}

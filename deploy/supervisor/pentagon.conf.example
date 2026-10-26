@@ -1,0 +1,29 @@
+[program:pentagon-documents]
+command=/usr/bin/php /srv/pentagon/current/backend/artisan queue:work database --queue=documents --tries=1 --timeout=960 --memory=512 --sleep=3
+user=pentagon
+numprocs=1
+autostart=true
+autorestart=true
+stopasgroup=true
+killasgroup=true
+stopwaitsecs=1200
+redirect_stderr=true
+stdout_logfile=/srv/pentagon/shared/logs/documents-worker.log
+stdout_logfile_maxbytes=10MB
+stdout_logfile_backups=5
+environment=PLAYWRIGHT_BROWSERS_PATH="/srv/pentagon/shared/ms-playwright",PYTHONUTF8="1"
+
+[program:pentagon-exports]
+command=/usr/bin/php /srv/pentagon/current/backend/artisan queue:work database --queue=exports --tries=1 --timeout=240 --memory=512 --sleep=3
+user=pentagon
+numprocs=1
+autostart=true
+autorestart=true
+stopasgroup=true
+killasgroup=true
+stopwaitsecs=1200
+redirect_stderr=true
+stdout_logfile=/srv/pentagon/shared/logs/exports-worker.log
+stdout_logfile_maxbytes=10MB
+stdout_logfile_backups=5
+environment=PLAYWRIGHT_BROWSERS_PATH="/srv/pentagon/shared/ms-playwright",PYTHONUTF8="1"

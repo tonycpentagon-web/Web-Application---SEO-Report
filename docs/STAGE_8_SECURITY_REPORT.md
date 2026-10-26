@@ -1,0 +1,22 @@
+# Stage 8 security report
+
+Local checks date: 19 October 2026. **NO-GO for production**; no penetration-test or hosting certification is claimed.
+
+| Severity | Finding / evidence | Disposition |
+| --- | --- | --- |
+| High | Real same-origin browser GETs lost session authentication because frontend no-referrer metadata omitted both Referer and Origin, which Sanctum requires for stateful detection | Fixed to origin-only frontend/web-server policy. Browser previously redirected to login; after fix actual API user/health/delivery requests return 200 on desktop/mobile. Paths/reset tokens remain omitted. |
+| High | Development frontend environment could point staging production assets at development API | Staging build explicitly uses VITE_API_URL=/; Compose image excludes actual .env files and uses same-origin build. Development environment unchanged. |
+| High | MySQL/Linux/public TLS/SMTP/offsite recovery unknown | BLOCKED release gates, never inferred from Windows/local log capture. |
+| High | HTTP Chromium health probe could not create temporary artifacts because Windows web subprocess environment omitted temp/profile context, while CLI rendering worked | Fixed explicit OS/temp execution context for health, Python and PDF subprocesses; authenticated HTTP probe now Healthy. Regression checks exclude request/secret fields from helper additions. |
+| Medium | Scheduler execution was not visible in health | Added expiring scheduled cache heartbeat and Healthy/Warning/Not verified/Unavailable states, with stale/missing/fault tests. One heartbeat does not certify every scheduled command. |
+| Medium | Shell environment/cache paths could redirect a local drill | Windows bootstrap forces isolated DB/private/session/cache/queue/mail paths before Laravel bootstrap. Separate key and shadow .env. |
+| Medium | Resource and operational failure exposure | Existing limits/private errors preserved; 10-upload and 1,009-keyword tests passed; missing runtimes report Unavailable. Mid-job crash/MySQL reconnect remain NOT TESTED/BLOCKED. |
+| Informational | Dependency advisories | Composer and frontend/renderer npm feeds returned zero listed findings. Python PyPI metadata check covered 32 installed runtime distributions with zero listed findings/unverified versions. |
+
+Direct HTTP tests: guests denied; missing CSRF rejected with 419; manipulated foreign project/report/dashboard/data/document/delivery IDs and PDF download/retry denied; executive publication and viewer admin/health denied; manager frontend health link absent and direct page denied; real login/logout and session invalidation passed. Synthetic password reset and invitation captured only in private logs; reset token used successfully without printing it. Three-client/all-role/deactivated/archive/share expiration/revocation tests also pass in the Laravel suite. The referrer correction changes stateful detection, not authorization or publication criteria.
+
+Existing parameter-bound queries, React escaping, offline PDF network/JavaScript/service-worker blocking, content-signature/MIME/archive/path/resource checks and hashed expiring/revocable share tokens remain in place. Tests cover malicious upload names/content and escaped PDF URL markup. These checks do not establish a complete SQL-injection/XSS/SSRF assessment on an unknown final proxy/network. No processor URL-fetch integration was added.
+
+An explicit synthetic AI absence decision was needed before verification; the initial unreviewed value correctly returned 422. Revocation without confirmation also returned 422; the harness was corrected to supply required confirmation. No production rule was relaxed to make those tests pass. Only isolated synthetic business data received fixture approvals/publication.
+
+Limits: no full Git history audit because no .git exists; package pattern scanning is not a comprehensive secret scanner. Optional psutil measurement-tool download stalled and was stopped; no successful install or psutil results are claimed. Existing PyYAML and standard Windows counters supplied available measurements. No runtime dependency upgrades, password/key changes on development data, external emails, Git push or public deployment occurred. Local HTTP cookie behavior is intentionally insecure-cookie fallback; production secure-cookie/TLS behavior is NOT TESTED here except existing configuration/security regressions. Container/browser sandbox and host egress isolation need real Linux verification.

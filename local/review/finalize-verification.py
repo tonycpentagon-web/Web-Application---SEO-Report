@@ -1,0 +1,7 @@
+﻿from pathlib import Path
+p=Path('docs/SIMPLIFIED_WORKFLOW_VERIFICATION.md');s=p.read_text(encoding='utf-8-sig');needle='All new end-to-end cases use an isolated SQLite test database, synthetic fixtures and fake private storage. The configured live database was not used for test writes.'
+s=s.replace(needle,needle+'''
+
+Final results: **168 Laravel tests passed, one MySQL-only test skipped; 114 frontend tests passed; 38 Python tests passed; 21 browser layout/interaction checks passed**. A final focused workflow run also passed all four tests with 121 assertions, including employee narrative editing and author archive/Trash/restore. The actual generated synthetic client PDF has nine pages, includes uncertainty disclosures and provisional labels, and contains no old approval-required instruction. Source-code checks and the production build passed.
+''');s=s.replace('local/review/simplified-targeted-tests.txt,','local/review/simplified-targeted-tests.txt, local/review/simplified-workflow-final.txt, local/review/simplified-pdf-inspection.json,');p.write_text(s,encoding='utf-8')
+p=Path('docs/SIMPLIFIED_SEO_EMPLOYEE_GUIDE.md');s=p.read_text(encoding='utf-8-sig').replace('Monthly report Actions support archive, Trash and restore.','Monthly report Actions support archive, Trash and restore for report authors and project managers. Administrators manage the Trash list and permanent deletion.');p.write_text(s,encoding='utf-8')

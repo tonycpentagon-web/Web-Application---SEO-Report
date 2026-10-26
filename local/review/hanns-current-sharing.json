@@ -1,0 +1,480 @@
+{
+    "report": {
+        "id": "01m5cc50zfzk56dwfc9ft9erb6",
+        "project_id": "01m5cc00he72s9nhbmmw7bj4cn",
+        "title": "August 2026",
+        "reporting_month": "2026-08",
+        "kind": "monthly",
+        "start_date": "2026-08-01",
+        "end_date": "2026-08-31",
+        "status": "published",
+        "created_by": 1,
+        "updated_by": 1,
+        "version": 8,
+        "created_at": "2026-10-20T10:01:45.000000Z",
+        "updated_at": "2026-10-22T06:00:57.000000Z",
+        "deleted_at": null,
+        "lifecycle_previous_status": null,
+        "requires_regeneration": false,
+        "workspace_archived_at": "2026-10-22T06:00:57.000000Z",
+        "project": {
+            "id": "01m5cc00he72s9nhbmmw7bj4cn",
+            "name": "Hann's Pharmacy \u2013 SEO Testing",
+            "client_name": "Hann's Pharmacy",
+            "website": "https:\/\/hannspharmacy.com\/",
+            "description": null,
+            "status": "active",
+            "created_at": "2026-10-20T09:59:00.000000Z",
+            "updated_at": "2026-10-20T09:59:00.000000Z",
+            "client_id": "01M51NAS1BF9SYNX0XTC7MS6XJ",
+            "reporting_frequency": "monthly",
+            "start_date": "2026-08-01",
+            "deleted_at": null,
+            "lifecycle_previous_status": null,
+            "client": {
+                "id": "01M51NAS1BF9SYNX0XTC7MS6XJ",
+                "name": "Hann's Pharmacy",
+                "company_name": null,
+                "website": "https:\/\/hannspharmacy.com\/",
+                "contact_email": null,
+                "contact_phone": null,
+                "country": null,
+                "brand_color": "#087e98",
+                "status": "active",
+                "notes": null,
+                "created_at": "2026-10-16T06:01:37.000000Z",
+                "updated_at": "2026-10-22T05:38:29.000000Z",
+                "deleted_at": null,
+                "lifecycle_previous_status": null
+            }
+        }
+    },
+    "assessment": {
+        "requires_regeneration": false,
+        "requires_validation_refresh": false,
+        "source_periods": [
+            {
+                "document_id": "01M5CC6S9BDZQ3NT8AEQ0W87D3",
+                "document": "Hann_s Pharmacy_Keyword_Ranking_Report_August_26.pdf",
+                "status": "exact",
+                "known": true,
+                "matches": true,
+                "requires_confirmation": false,
+                "candidate_outside_period": false,
+                "basis": "native_month_title",
+                "uncovered_dates": [],
+                "ranges": [
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-31"
+                    }
+                ],
+                "evidence": [
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-31",
+                        "text": "SEO REPORT - A U G U S T \u2019 2 6",
+                        "location": {
+                            "page": 1,
+                            "line": 8
+                        },
+                        "content_id": "01m5cc7264pqww0zw0q97xptr5",
+                        "method": "native",
+                        "role": "report_period",
+                        "basis": "explicit_month_title",
+                        "reliable": true
+                    },
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-31",
+                        "text": "SEO REPORT - A U G U S T \u2019 2 6",
+                        "location": {
+                            "page": 1,
+                            "block": 2,
+                            "bbox": [
+                                56.90399932861328,
+                                238.6099853515625,
+                                450.1720275878906,
+                                267.5779724121094
+                            ],
+                            "line": 1
+                        },
+                        "content_id": "01m5cc726500t4tvh3s9jt9e48",
+                        "method": "ocr",
+                        "role": "report_period",
+                        "basis": "explicit_month_title",
+                        "reliable": false
+                    }
+                ],
+                "ignored_dates": [],
+                "selected_period": {
+                    "start": "2026-08-01",
+                    "end": "2026-08-31"
+                },
+                "scope_confirmed": false
+            },
+            {
+                "document_id": "01M5CC6SY7JWMAVGTK0RHBEN19",
+                "document": "Hann-39_s Pharmacy - SEO Work Report-August\u201826.pdf",
+                "status": "exact",
+                "known": true,
+                "matches": true,
+                "requires_confirmation": false,
+                "candidate_outside_period": false,
+                "basis": "native_month_title",
+                "uncovered_dates": [],
+                "ranges": [
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-31"
+                    }
+                ],
+                "evidence": [
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-31",
+                        "text": "SEO WORK REPORT - A U G U S T \u201826",
+                        "location": {
+                            "page": 1,
+                            "line": 9
+                        },
+                        "content_id": "01m5cc7bnvrpdd8tzebm49azgr",
+                        "method": "native",
+                        "role": "report_period",
+                        "basis": "explicit_month_title",
+                        "reliable": true
+                    },
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-31",
+                        "text": "SEO WORK REPORT - A U G U S T \u201826",
+                        "location": {
+                            "page": 1,
+                            "block": 2,
+                            "bbox": [
+                                56.90399932861328,
+                                255.64999389648438,
+                                509.5697326660156,
+                                315.2179870605469
+                            ],
+                            "line": 1
+                        },
+                        "content_id": "01m5cc7bnxxv3ecen7qqbzq03r",
+                        "method": "ocr",
+                        "role": "report_period",
+                        "basis": "explicit_month_title",
+                        "reliable": false
+                    }
+                ],
+                "ignored_dates": [],
+                "selected_period": {
+                    "start": "2026-08-01",
+                    "end": "2026-08-31"
+                },
+                "scope_confirmed": false
+            },
+            {
+                "document_id": "01M5CC6TKR09ADWFSYBSYY8QWJ",
+                "document": "Hann's_-_Pharmacy_-_Website_Analytics_Report-_August\u00a0_2026.pdf",
+                "status": "partial",
+                "known": true,
+                "matches": false,
+                "requires_confirmation": true,
+                "candidate_outside_period": false,
+                "basis": "report_header_range",
+                "uncovered_dates": [
+                    "2026-08-31"
+                ],
+                "ranges": [
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-30"
+                    }
+                ],
+                "evidence": [
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-30",
+                        "text": "1 Aug 2026 - 30 Aug 2026",
+                        "location": {
+                            "page": 1,
+                            "line": 5
+                        },
+                        "content_id": "01m5cc8stpktb62ar6yr7dn81h",
+                        "method": "native",
+                        "role": "report_period",
+                        "basis": "standalone_header_range",
+                        "reliable": true
+                    },
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-30",
+                        "text": "1 Aug 2026 - 30 Aug 2026",
+                        "location": {
+                            "page": 2,
+                            "line": 4
+                        },
+                        "content_id": "01m5cc8sttbym7ssprxkbcvvrg",
+                        "method": "native",
+                        "role": "report_period",
+                        "basis": "standalone_header_range",
+                        "reliable": true
+                    },
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-30",
+                        "text": "1 Aug 2026 - 30 Aug 2026",
+                        "location": {
+                            "page": 3,
+                            "line": 4
+                        },
+                        "content_id": "01m5cc8sv9n56cm5j838hngyz2",
+                        "method": "native",
+                        "role": "report_period",
+                        "basis": "standalone_header_range",
+                        "reliable": true
+                    },
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-30",
+                        "text": "1 Aug 2026 - 30 Aug 2026",
+                        "location": {
+                            "page": 4,
+                            "line": 2
+                        },
+                        "content_id": "01m5cc8svrb3esf7x2jn1cmg8f",
+                        "method": "native",
+                        "role": "report_period",
+                        "basis": "standalone_header_range",
+                        "reliable": true
+                    }
+                ],
+                "ignored_dates": [],
+                "selected_period": {
+                    "start": "2026-08-01",
+                    "end": "2026-08-31"
+                },
+                "scope_confirmed": true
+            },
+            {
+                "document_id": "01M5CC6VCVJHGEXCSQ4Q5BFX78",
+                "document": "Hann's_Keyword_Ai_Visibility_2026 - Aug- (1).pdf",
+                "status": "exact",
+                "known": true,
+                "matches": true,
+                "requires_confirmation": false,
+                "candidate_outside_period": false,
+                "basis": "native_month_title",
+                "uncovered_dates": [],
+                "ranges": [
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-31"
+                    }
+                ],
+                "evidence": [
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-31",
+                        "text": "AI VISIBILITY REPORT - AUGUST\u201926",
+                        "location": {
+                            "page": 1,
+                            "line": 7
+                        },
+                        "content_id": "01m5ccacn2t020dj6qejcvhygm",
+                        "method": "native",
+                        "role": "report_period",
+                        "basis": "explicit_month_title",
+                        "reliable": true
+                    },
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-31",
+                        "text": "AI VISIBILITY REPORT - AUGUST\u201926",
+                        "location": {
+                            "page": 1,
+                            "block": 1,
+                            "bbox": [
+                                43.68000030517578,
+                                220.219970703125,
+                                532.27197265625,
+                                249.18797302246094
+                            ],
+                            "line": 1
+                        },
+                        "content_id": "01m5ccacn38667qywjcadj80zc",
+                        "method": "ocr",
+                        "role": "report_period",
+                        "basis": "explicit_month_title",
+                        "reliable": false
+                    }
+                ],
+                "ignored_dates": [],
+                "selected_period": {
+                    "start": "2026-08-01",
+                    "end": "2026-08-31"
+                },
+                "scope_confirmed": false
+            },
+            {
+                "document_id": "01M5CC6VS3F7N5Y3PWS9W9YNWK",
+                "document": "key events-August'26.png",
+                "status": "uncertain",
+                "known": false,
+                "matches": false,
+                "requires_confirmation": true,
+                "candidate_outside_period": false,
+                "basis": "uncertain_ocr_or_context",
+                "uncovered_dates": [
+                    "2026-08-31"
+                ],
+                "ranges": [
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-30"
+                    }
+                ],
+                "evidence": [
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-30",
+                        "text": "1 Aug 2026-30 Aug 2026",
+                        "location": {
+                            "page": 1,
+                            "asset_path": "assets\/asset-00001.png",
+                            "line": 1
+                        },
+                        "content_id": "01m5ccafrkvk6zs92fnjq10py4",
+                        "method": "ocr",
+                        "role": "report_period",
+                        "basis": "standalone_header_range",
+                        "reliable": false
+                    },
+                    {
+                        "start": "2026-08-01",
+                        "end": "2026-08-30",
+                        "text": "1Aug 2026-30Aug 2026",
+                        "location": {
+                            "page": 1,
+                            "asset_path": "assets\/asset-00001.png",
+                            "line": 2
+                        },
+                        "content_id": "01m5ccafrkvk6zs92fnjq10py4",
+                        "method": "ocr",
+                        "role": "report_period",
+                        "basis": "standalone_header_range",
+                        "reliable": false
+                    }
+                ],
+                "ignored_dates": [],
+                "selected_period": {
+                    "start": "2026-08-01",
+                    "end": "2026-08-31"
+                },
+                "scope_confirmed": true
+            }
+        ],
+        "period_confirmations": [],
+        "eligible": true,
+        "blockers": [],
+        "warnings": [
+            {
+                "section": "keywords",
+                "record_id": "01m5ccagjks6xrr0w5dzvmpvhk",
+                "message": "missing_value: A keyword source row has no ranking on the same line. multiline_keyword_rank: A ranking spans multiple source lines\/alternative labels; confirm the association. Normalized ranking_label is not directly supported at the cited source location. Inferred or ambiguous source mapping requires inspection."
+            },
+            {
+                "section": "keywords",
+                "record_id": "01m5ccagjmrnecq1fgy5s3v812",
+                "message": "missing_value: A keyword source row has no ranking on the same line. multiline_keyword_rank: A ranking spans multiple source lines\/alternative labels; confirm the association. Normalized ranking_label is not directly supported at the cited source location. Normalized keyword is not directly supported at the cited source location. Inferred or ambiguous source mapping requires inspection."
+            },
+            {
+                "section": "seo_work",
+                "record_id": "01m5ccagwxj94qdm4zdyxs68k6",
+                "message": "url_source_disagreement: Displayed URL text differs from its unique matching hyperlink target. The target and displayed text are both retained; review before approval. Inferred or ambiguous source mapping requires inspection."
+            },
+            {
+                "section": "website_traffic",
+                "record_id": "01m5ccaheyvcavrxjeqf92nx38",
+                "message": "Partial-month source coverage; values do not include every day of the selected month."
+            },
+            {
+                "section": "website_traffic",
+                "record_id": "01m5ccahf25k70gasd5mp93667",
+                "message": "Partial-month source coverage; values do not include every day of the selected month. Normalized value is not directly supported at the cited source location."
+            },
+            {
+                "section": "organic_search",
+                "record_id": "01m5ccahf3snxfbfmw5sdef849",
+                "message": "Partial-month source coverage; values do not include every day of the selected month."
+            },
+            {
+                "section": "website_traffic",
+                "record_id": "01m5ccahfwc97cb0bw53cgp9s5",
+                "message": "Partial-month source coverage; values do not include every day of the selected month. Metric label and value are not directly paired at the cited source location."
+            },
+            {
+                "section": "organic_search",
+                "record_id": "01m5ccahg9e528ryctad27n1et",
+                "message": "wrapped_url: A URL wraps across source lines. Joined text requires comparison with the original. Partial-month source coverage; values do not include every day of the selected month. Inferred or ambiguous source mapping requires inspection."
+            },
+            {
+                "section": "ai_visibility",
+                "record_id": "01m5ccahvxp1z3cne2v3z23cww",
+                "message": "Brand appearance is unverified. OCR-dependent evidence requires source inspection. Screenshot observation only; brand appearance has not been verified. Inferred or ambiguous source mapping requires inspection."
+            },
+            {
+                "section": "key_events",
+                "record_id": "01m5ccahxj0086csh974fgrnjh",
+                "message": "OCR-dependent evidence requires source inspection."
+            },
+            {
+                "section": "sources",
+                "document": "Hann's_-_Pharmacy_-_Website_Analytics_Report-_August\u00a0_2026.pdf",
+                "message": "Printed source coverage: 2026-08-01 to 2026-08-30. Dates not covered by this printed range: 2026-08-31. Source covers only part of the selected month. Preserve the printed dates and explicitly confirm publication with incomplete coverage."
+            },
+            {
+                "section": "sources",
+                "document": "key events-August'26.png",
+                "message": "Printed source coverage: 2026-08-01 to 2026-08-30. Dates not covered by this printed range: 2026-08-31. The reporting period is uncertain. Confirm source assignment without claiming the dates or OCR values are verified."
+            },
+            {
+                "section": "sources",
+                "document": "Hann's_-_Pharmacy_-_Website_Analytics_Report-_August\u00a0_2026.pdf",
+                "message": "Source reports 2026-08-01 to 2026-08-30. Printed dates are retained; coverage is partial within the selected month."
+            },
+            {
+                "section": "sources",
+                "document": "key events-August'26.png",
+                "message": "Source reports 2026-08-01 to 2026-08-30. Printed dates are retained; OCR dates require explicit source assignment."
+            },
+            {
+                "section": "sources",
+                "message": "Source extraction is partial. Inspect preserved images and extraction warnings."
+            },
+            {
+                "section": "sources",
+                "message": "OCR-derived observations remain provisional and may contain recognition errors."
+            },
+            {
+                "section": "sources",
+                "message": "Exact ranking date\/location are not reported by some supported source fields; missing values remain null."
+            },
+            {
+                "section": "sources",
+                "message": "Additional source context is preserved for inspection; only supported observations are charted."
+            },
+            {
+                "section": "sources",
+                "message": "Source reports 2026-08-01 to 2026-08-30. Printed dates are retained; coverage is partial within the selected month."
+            },
+            {
+                "section": "sources",
+                "message": "Source reports 2026-08-01 to 2026-08-30. Printed dates are retained; OCR dates require explicit source assignment."
+            }
+        ],
+        "requires_acknowledgment": true,
+        "resolution": null,
+        "fingerprint": "818795c576e8a725dc09b8c79c3e3fc8a202a4b8b7de69192e6bd982da007a8f"
+    }
+}

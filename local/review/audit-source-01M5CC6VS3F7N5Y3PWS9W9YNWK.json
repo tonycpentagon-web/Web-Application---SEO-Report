@@ -1,0 +1,17 @@
+[
+  {
+    "id": "01m5ccafrkvk6zs92fnjq10py4",
+    "document_id": "01M5CC6VS3F7N5Y3PWS9W9YNWK",
+    "extraction_run_id": "01m5cc6vsbhkjw2a7tjcf5ngst",
+    "ordinal": 0,
+    "content_type": "ocr_text",
+    "page_number": 1,
+    "worksheet_name": null,
+    "section_name": null,
+    "original_text": "1 Aug 2026-30 Aug 2026\n1Aug 2026-30Aug 2026\nEventname\nEventcount\n1.\ncontact_us\n37\n2.\nform_submission\n30\n3.\nPhone_Click\n17\n4.\nschedule_compression_clicks\n9\n5.\nEmail_Click\n4\nGrand total\n97",
+    "structured_json": "{\"engine\":\"rapidocr\",\"items\":[{\"text\":\"1 Aug 2026-30 Aug 2026\",\"confidence\":0.9685322669419375,\"bbox\":[[749,31],[913,31],[913,46],[749,46]]},{\"text\":\"1Aug 2026-30Aug 2026\",\"confidence\":0.956190076470375,\"bbox\":[[797,76],[944,76],[944,90],[797,90]]},{\"text\":\"Eventname\",\"confidence\":0.9976816044913398,\"bbox\":[[140,115],[215,116],[215,130],[139,129]]},{\"text\":\"Eventcount\",\"confidence\":0.9961992859840393,\"bbox\":[[889,115],[974,115],[974,131],[889,131]]},{\"text\":\"1.\",\"confidence\":0.9945709407329559,\"bbox\":[[59,144],[71,144],[71,157],[59,157]]},{\"text\":\"contact_us\",\"confidence\":0.9959267318248749,\"bbox\":[[139,143],[200,143],[200,157],[139,157]]},{\"text\":\"37\",\"confidence\":0.9993752837181091,\"bbox\":[[966,143],[985,143],[985,158],[966,158]]},{\"text\":\"2.\",\"confidence\":0.9879981279373169,\"bbox\":[[58,172],[72,172],[72,187],[58,187]]},{\"text\":\"form_submission\",\"confidence\":0.9994963884353638,\"bbox\":[[139,172],[234,172],[234,186],[139,186]]},{\"text\":\"30\",\"confidence\":0.999610036611557,\"bbox\":[[967,172],[985,172],[985,188],[967,188]]},{\"text\":\"3.\",\"confidence\":0.9775880575180054,\"bbox\":[[58,201],[72,201],[72,216],[58,216]]},{\"text\":\"Phone_Click\",\"confidence\":0.9540760896422646,\"bbox\":[[139,199],[208,201],[208,217],[139,215]]},{\"text\":\"17\",\"confidence\":0.9997608661651611,\"bbox\":[[968,202],[984,202],[984,216],[968,216]]},{\"text\":\"4.\",\"confidence\":0.9854512214660645,\"bbox\":[[58,230],[72,230],[72,245],[58,245]]},{\"text\":\"schedule_compression_clicks\",\"confidence\":0.9757756921980116,\"bbox\":[[140,231],[301,231],[301,245],[140,245]]},{\"text\":\"9\",\"confidence\":0.9982538819313049,\"bbox\":[[974,231],[984,231],[984,244],[974,244]]},{\"text\":\"5.\",\"confidence\":0.9957927167415619,\"bbox\":[[59,260],[71,260],[71,274],[59,274]]},{\"text\":\"Email_Click\",\"confidence\":0.9681063836271112,\"bbox\":[[139,259],[203,259],[203,274],[139,274]]},{\"text\":\"4\",\"confidence\":0.9994866847991943,\"bbox\":[[975,261],[984,261],[984,273],[975,273]]},{\"text\":\"Grand total\",\"confidence\":0.9575463641773571,\"bbox\":[[139,316],[202,316],[202,330],[139,330]]},{\"text\":\"97\",\"confidence\":0.9997617602348328,\"bbox\":[[966,316],[984,316],[984,332],[966,332]]}],\"review_required\":true}",
+    "source_location": "{\"page\":1,\"asset_path\":\"assets\\/asset-00001.png\"}",
+    "confidence_status": "ocr",
+    "created_at": "2026-10-20 10:04:44"
+  }
+]

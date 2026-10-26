@@ -1,0 +1,8 @@
+﻿from pathlib import Path
+p=Path('backend/app/Services/ReportDelivery.php');s=p.read_text(encoding='utf-8');needle="        $dates = collect($run?->summary['classifications'] ?? [])->keyBy('document_id');"
+assert needle in s;s=s.replace(needle,needle+"\n        $validation = app(EvidenceValidation::class)->current($p);\n        $periodEvidence = $validation && $validation['current'] ? collect($validation['summary']['source_periods'] ?? [])->keyBy('document_id') : collect();")
+needle="                $sources[] = ['document' => $doc?->original_filename,"
+idx=s.index(needle);s=s[:idx]+"                $period = $periodEvidence->get($s['document_id']);\n                $sourceRanges = $period ? ($period['basis'] === 'native_month_title' ? [] : $period['ranges']) : ($dates->get($s['document_id'])['source_dates'] ?? []);\n"+s[idx:]
+s=s.replace("'source_period' => $dates->get($s['document_id'])['source_dates'] ?? []", "'source_period' => $sourceRanges, 'declared_month' => $period && $period['basis'] === 'native_month_title' ? substr($period['ranges'][0]['start'] ?? '', 0, 7) : null")
+p.write_text(s,encoding='utf-8')
+p=Path('frontend/src/pages/report-share.tsx');s=p.read_text(encoding='utf-8').replace('status:string;scope_confirmed?', 'status:string;basis?:string;scope_confirmed?').replace("{p.ranges.length?p.ranges.map(r=>r.start+' to '+r.end).join('; '):'Not reliably established'}", "{p.basis==='native_month_title'?'Declared report month: '+p.ranges[0]?.start.slice(0,7):p.ranges.length?p.ranges.map(r=>r.start+' to '+r.end).join('; '):'Not reliably established'}");p.write_text(s,encoding='utf-8')

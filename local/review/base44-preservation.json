@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "clients": true,
+    "projects": true,
+    "report_documents": true,
+    "document_extracted_content": true,
+    "document_assets": true,
+    "record_verifications": true,
+    "other_reports": true,
+    "other_report_normalized_values": true,
+    "existing_publications_immutable": true,
+    "original_checksums": true,
+    "only_documented_landing_column_corrections": true,
+    "existing_manual_overrides_preserved": true
+  },
+  "original_count": 25,
+  "source_data_corrections": {
+    "landing_page_metrics": 20
+  },
+  "active_keywords": 40
+}

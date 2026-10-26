@@ -1,0 +1,19 @@
+{
+  "liveBackend": true,
+  "checks": [
+    "Real Share Report click and Copy Link",
+    "Independent anonymous browser context: charts, keywords, SEO activities, nine AI screenshots and key events",
+    "Public token cannot access employee/project/client APIs or private originals; wrong token rejected",
+    "Actual public link revoked; subsequent anonymous access returns 404",
+    "Fresh active link retained for user; same immutable snapshot, distinct random token"
+  ],
+  "errors": [],
+  "publicationId": "01m5h35j6t642pg3jrvnp0fnzw",
+  "counts": {
+    "keyword_rankings": 69,
+    "seo_activities": 93,
+    "ai_visibility_evidence": 9,
+    "event_metrics": 5
+  },
+  "noLogin": true
+}

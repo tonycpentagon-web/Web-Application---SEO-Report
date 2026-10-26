@@ -1,0 +1,302 @@
+{
+  "version": 10,
+  "status": "published",
+  "report": {
+    "title": "September 2026",
+    "client_name": "Advanced Properties",
+    "month": "September 2026"
+  },
+  "assessment": {
+    "requires_regeneration": false,
+    "requires_validation_refresh": false,
+    "source_periods": [
+      {
+        "document_id": "01M5H5Q46084TMVR2PN84WH6AX",
+        "document": "Advanced_Properties_AI_Visibility_Report_September’26.pdf",
+        "status": "exact",
+        "known": true,
+        "matches": true,
+        "requires_confirmation": false,
+        "candidate_outside_period": false,
+        "basis": "native_month_title",
+        "uncovered_dates": [],
+        "ranges": [
+          {
+            "start": "2026-09-01",
+            "end": "2026-09-30"
+          }
+        ],
+        "evidence": [
+          {
+            "start": "2026-09-01",
+            "end": "2026-09-30",
+            "text": "AI VISIBILITY REPORT - S E P T ’ 2 6",
+            "location": {
+              "page": 1,
+              "line": 8
+            },
+            "content_id": "01m5h5rqjh2wyffrd2dr3rhsra",
+            "method": "native",
+            "role": "report_period",
+            "basis": "explicit_month_title",
+            "reliable": true
+          },
+          {
+            "start": "2026-09-01",
+            "end": "2026-09-30",
+            "text": "AI VISIBILITY REPORT - S E P T ’ 2 6",
+            "location": {
+              "page": 1,
+              "block": 1,
+              "bbox": [
+                72.02400207519531,
+                168.3799591064453,
+                499.0299987792969,
+                267.3379821777344
+              ],
+              "line": 5
+            },
+            "content_id": "01m5h5rqjj49s2rzadv1es2f5v",
+            "method": "native",
+            "role": "report_period",
+            "basis": "explicit_month_title",
+            "reliable": false
+          }
+        ],
+        "ignored_dates": [],
+        "selected_period": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "scope_confirmed": false
+      },
+      {
+        "document_id": "01M5H5Q4E0XRY7W4YJCCKVBEWE",
+        "document": "Advanced_Properties_Keyword Ranking_Report_September’26.pdf",
+        "status": "exact",
+        "known": true,
+        "matches": true,
+        "requires_confirmation": false,
+        "candidate_outside_period": false,
+        "basis": "native_month_title",
+        "uncovered_dates": [],
+        "ranges": [
+          {
+            "start": "2026-09-01",
+            "end": "2026-09-30"
+          }
+        ],
+        "evidence": [
+          {
+            "start": "2026-09-01",
+            "end": "2026-09-30",
+            "text": "SEO REPORT - S E P T ’ 2 6",
+            "location": {
+              "page": 1,
+              "line": 8
+            },
+            "content_id": "01m5h5rv99hq95mtbncx2zx0ba",
+            "method": "native",
+            "role": "report_period",
+            "basis": "explicit_month_title",
+            "reliable": true
+          },
+          {
+            "start": "2026-09-01",
+            "end": "2026-09-30",
+            "text": "SEO REPORT - S E P T ’ 2 6",
+            "location": {
+              "page": 1,
+              "block": 1,
+              "bbox": [
+                72.02400207519531,
+                168.3799591064453,
+                434.97998046875,
+                272.68133544921875
+              ],
+              "line": 5
+            },
+            "content_id": "01m5h5rv9afabqmv9cq42jkdjb",
+            "method": "native",
+            "role": "report_period",
+            "basis": "explicit_month_title",
+            "reliable": false
+          }
+        ],
+        "ignored_dates": [],
+        "selected_period": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "scope_confirmed": false
+      },
+      {
+        "document_id": "01M5H5Q5MMKY57VG3M1BXHJQW6",
+        "document": "Advanced_Properties-_Website_Analytics_Report-_September-39_2026.pdf",
+        "status": "uncertain",
+        "known": false,
+        "matches": false,
+        "requires_confirmation": true,
+        "candidate_outside_period": false,
+        "basis": "not_reported",
+        "uncovered_dates": [],
+        "ranges": [],
+        "evidence": [],
+        "ignored_dates": [],
+        "selected_period": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "scope_confirmed": true
+      },
+      {
+        "document_id": "01M5H5Q5YCV9R3XWTZ3908ZKN5",
+        "document": "Advanced_Properties-Key_Events_September_26..png",
+        "status": "uncertain",
+        "known": false,
+        "matches": false,
+        "requires_confirmation": true,
+        "candidate_outside_period": false,
+        "basis": "not_reported",
+        "uncovered_dates": [],
+        "ranges": [],
+        "evidence": [],
+        "ignored_dates": [],
+        "selected_period": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "scope_confirmed": true
+      },
+      {
+        "document_id": "01M5H5Q6YFC94GNHCWTGNJ7S71",
+        "document": "Advanced_Properties-SEO Work Report-September_26.pdf",
+        "status": "exact",
+        "known": true,
+        "matches": true,
+        "requires_confirmation": false,
+        "candidate_outside_period": false,
+        "basis": "native_month_title",
+        "uncovered_dates": [],
+        "ranges": [
+          {
+            "start": "2026-09-01",
+            "end": "2026-09-30"
+          }
+        ],
+        "evidence": [
+          {
+            "start": "2026-09-01",
+            "end": "2026-09-30",
+            "text": "SEO WORK REPORT- S E P T ‘26",
+            "location": {
+              "page": 1,
+              "line": 9
+            },
+            "content_id": "01m5h5tqfcxsx4g36w0hkv6sv4",
+            "method": "native",
+            "role": "report_period",
+            "basis": "explicit_month_title",
+            "reliable": true
+          },
+          {
+            "start": "2026-09-01",
+            "end": "2026-09-30",
+            "text": "SEO WORK REPORT- S E P T ‘26",
+            "location": {
+              "page": 1,
+              "block": 2,
+              "bbox": [
+                27.959999084472656,
+                260.80999755859375,
+                473.6199951171875,
+                341.2176513671875
+              ],
+              "line": 1
+            },
+            "content_id": "01m5h5tqfddkx4wfef1v357anh",
+            "method": "native",
+            "role": "report_period",
+            "basis": "explicit_month_title",
+            "reliable": false
+          }
+        ],
+        "ignored_dates": [],
+        "selected_period": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "scope_confirmed": false
+      }
+    ],
+    "period_confirmations": [],
+    "eligible": true,
+    "blockers": [],
+    "warnings": [
+      {
+        "section": "ai_visibility",
+        "record_id": "01m5h5tr6vj2ng2zx8hcef5qvp",
+        "message": "Brand appearance is unverified. OCR-dependent evidence requires source inspection. Screenshot observation only; brand appearance has not been verified. Inferred or ambiguous source mapping requires inspection."
+      },
+      {
+        "section": "ai_visibility",
+        "record_id": "01m5h5tr74evwyrbdnv9xyewth",
+        "message": "Brand appearance is unverified. OCR-dependent evidence requires source inspection. Normalized query is not directly supported at the cited source location. Screenshot observation only; brand appearance has not been verified. Inferred or ambiguous source mapping requires inspection."
+      },
+      {
+        "section": "website_traffic",
+        "record_id": "01m5h5trannwrnx3h32a9txvdc",
+        "message": "Normalized value is not directly supported at the cited source location."
+      },
+      {
+        "section": "website_traffic",
+        "record_id": "01m5h5trav1j7nnx82321jp93n",
+        "message": "Metric label and value are not directly paired at the cited source location."
+      },
+      {
+        "section": "key_events",
+        "record_id": "01m5h5trnjayzhn46a5g6y92yt",
+        "message": "OCR-dependent evidence requires source inspection."
+      },
+      {
+        "section": "sources",
+        "document": "Advanced_Properties-_Website_Analytics_Report-_September-39_2026.pdf",
+        "message": "The reporting period is uncertain. Confirm source assignment without claiming the dates or OCR values are verified."
+      },
+      {
+        "section": "sources",
+        "document": "Advanced_Properties-Key_Events_September_26..png",
+        "message": "The reporting period is uncertain. Confirm source assignment without claiming the dates or OCR values are verified."
+      },
+      {
+        "section": "sources",
+        "message": "OCR-derived observations remain provisional and may contain recognition errors."
+      },
+      {
+        "section": "sources",
+        "message": "Additional source context is preserved for inspection; only supported observations are charted."
+      },
+      {
+        "section": "sources",
+        "message": "Source extraction is partial. Inspect preserved images and extraction warnings."
+      }
+    ],
+    "requires_acknowledgment": true,
+    "resolution": null,
+    "fingerprint": "02f6cbe6e53db86f614d2c53cea2df888ec5d218fe29063de843eb225c92a665"
+  },
+  "links": [
+    {
+      "id": "01M5H6S2GRQN3QE1SGXXTB8DCN",
+      "expires_at": "2026-11-21T07:04:02+00:00",
+      "revoked_at": null
+    }
+  ],
+  "exports": [
+    {
+      "id": "01m5h6s2h1c7e82gjv7h5p4p65",
+      "status": "completed",
+      "error": null
+    }
+  ]
+}

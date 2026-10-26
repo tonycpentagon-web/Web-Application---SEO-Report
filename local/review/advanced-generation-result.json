@@ -1,0 +1,135 @@
+{
+  "generation": {
+    "id": "01m5hfx5sbna56s43sqmdntwdw",
+    "reporting_period_id": "01m5h5pm1xacszarrdcgxwbtnp",
+    "requested_by": 1,
+    "status": "completed",
+    "stage": "Your SEO report is ready. Preview, optionally edit, then Share Report.",
+    "normalization_run_id": "01m5hfx64ezppnsfgj9yhjdsna",
+    "error_message": null,
+    "completed_at": "2026-10-22 09:43:37",
+    "created_at": "2026-10-22T09:43:34.000000Z",
+    "updated_at": "2026-10-22T09:43:37.000000Z",
+    "stale": false
+  },
+  "classifications": [
+    {
+      "document_id": "01M5H5Q46084TMVR2PN84WH6AX",
+      "labels": [
+        {
+          "type": "ai_visibility",
+          "confidence": "rule_based",
+          "rule": "ai visibility|ai search|ai overview|search visibility evidence"
+        }
+      ],
+      "source_dates": []
+    },
+    {
+      "document_id": "01M5H5Q4E0XRY7W4YJCCKVBEWE",
+      "labels": [
+        {
+          "type": "keyword_ranking",
+          "confidence": "rule_based",
+          "rule": "(?:^|\\n)\\s*(?:(?:extra|primary|additional)\\s+)?keywords?\\s*[,|\\t\\n]+\\s*(?:rank|ranking|position)|\\b(?:1st|2nd|3rd) page\\b"
+        }
+      ],
+      "source_dates": []
+    },
+    {
+      "document_id": "01M5H5Q5MMKY57VG3M1BXHJQW6",
+      "labels": [
+        {
+          "type": "ga4",
+          "confidence": "rule_based",
+          "rule": "\\bga4\\b|google analytics|total users|new users|session duration|traffic acquisition|active users"
+        },
+        {
+          "type": "search_console",
+          "confidence": "rule_based",
+          "rule": "google search console|impressions[\\s\\S]{0,200}(?:ctr|clicks)|(?:ctr|clicks)[\\s\\S]{0,200}impressions"
+        }
+      ],
+      "source_dates": [
+        {
+          "start": "2026-08-29",
+          "end": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "document_id": "01M5H5Q5YCV9R3XWTZ3908ZKN5",
+      "labels": [
+        {
+          "type": "key_events",
+          "confidence": "rule_based",
+          "rule": "event\\s*name[\\s\\S]{0,80}event\\s*count|key events|event,?count"
+        }
+      ],
+      "source_dates": []
+    },
+    {
+      "document_id": "01M5H5Q6YFC94GNHCWTGNJ7S71",
+      "labels": [
+        {
+          "type": "seo_work",
+          "confidence": "rule_based",
+          "rule": "article submissions?|profile creation|social bookmarking|ppt submissions?|guest posts?"
+        }
+      ],
+      "source_dates": []
+    }
+  ],
+  "can_generate": false,
+  "documents": [
+    {
+      "can_remove": false,
+      "id": "01M5H5Q46084TMVR2PN84WH6AX",
+      "name": "Advanced_Properties_AI_Visibility_Report_September’26.pdf",
+      "status": "needs_review",
+      "stage": "Extraction completed with review flags",
+      "error": null,
+      "stale": false,
+      "can_retry": false
+    },
+    {
+      "can_remove": false,
+      "id": "01M5H5Q4E0XRY7W4YJCCKVBEWE",
+      "name": "Advanced_Properties_Keyword Ranking_Report_September’26.pdf",
+      "status": "needs_review",
+      "stage": "Extraction completed with review flags",
+      "error": null,
+      "stale": false,
+      "can_retry": false
+    },
+    {
+      "can_remove": false,
+      "id": "01M5H5Q5MMKY57VG3M1BXHJQW6",
+      "name": "Advanced_Properties-_Website_Analytics_Report-_September-39_2026.pdf",
+      "status": "partially_extracted",
+      "stage": "Extraction completed with review flags",
+      "error": null,
+      "stale": false,
+      "can_retry": false
+    },
+    {
+      "can_remove": false,
+      "id": "01M5H5Q5YCV9R3XWTZ3908ZKN5",
+      "name": "Advanced_Properties-Key_Events_September_26..png",
+      "status": "needs_review",
+      "stage": "Extraction completed with review flags",
+      "error": null,
+      "stale": false,
+      "can_retry": false
+    },
+    {
+      "can_remove": false,
+      "id": "01M5H5Q6YFC94GNHCWTGNJ7S71",
+      "name": "Advanced_Properties-SEO Work Report-September_26.pdf",
+      "status": "partially_extracted",
+      "stage": "Extraction completed with review flags",
+      "error": null,
+      "stale": false,
+      "can_retry": false
+    }
+  ]
+}

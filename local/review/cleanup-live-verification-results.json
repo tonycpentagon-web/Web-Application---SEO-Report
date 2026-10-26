@@ -1,0 +1,161 @@
+{
+  "replacementRecordsCreated": false,
+  "api": {
+    "dashboard": {
+      "total_clients": 0,
+      "generated_this_month": 0,
+      "recent_activity": [],
+      "total_projects": 0,
+      "active_projects": 0,
+      "archived_projects": 0,
+      "active_clients": 0,
+      "reports_this_month": 0,
+      "draft_reports": 0,
+      "pending_manager_review": 0,
+      "published_reports": 0,
+      "recently_shared_reports": 0,
+      "recent_reports": [],
+      "recent_published_reports": [],
+      "active_reports": 0,
+      "recent_projects": [],
+      "reporting_status": "periods_enabled"
+    },
+    "/api/clients": {
+      "count": 0,
+      "total": 0
+    },
+    "/api/projects": {
+      "count": 0,
+      "total": 0
+    },
+    "/api/monthly-reports?tab=active": {
+      "count": 0,
+      "total": 0
+    },
+    "/api/monthly-reports?tab=history": {
+      "count": 0,
+      "total": 0
+    },
+    "/api/monthly-reports?tab=trash": {
+      "count": 0,
+      "total": 0
+    },
+    "/api/trash?type=client": {
+      "count": 0,
+      "total": 0
+    },
+    "/api/trash?type=project": {
+      "count": 0,
+      "total": 0
+    },
+    "/api/trash?type=report": {
+      "count": 0,
+      "total": 0
+    },
+    "/api/trash?type=document": {
+      "count": 0,
+      "total": 0
+    }
+  },
+  "pages": [
+    {
+      "path": "/",
+      "empty": true
+    },
+    {
+      "path": "/clients",
+      "empty": true
+    },
+    {
+      "path": "/projects",
+      "empty": true
+    },
+    {
+      "path": "/monthly-reports",
+      "empty": true
+    },
+    {
+      "path": "/monthly-reports?tab=history",
+      "empty": true
+    },
+    {
+      "path": "/monthly-reports?tab=trash",
+      "empty": true
+    },
+    {
+      "path": "/trash",
+      "empty": true
+    }
+  ],
+  "oldLinks": [
+    {
+      "id": "01M5H35J7CV3BCG3X0Q8585ZMW",
+      "reportStatus": 404,
+      "pdfStatus": 404,
+      "browserUnavailable": true
+    },
+    {
+      "id": "01M5H35R9E74J1JTY9CHQKR3HX",
+      "reportStatus": 404,
+      "pdfStatus": 404,
+      "browserUnavailable": true
+    },
+    {
+      "id": "01M5H4ZS0H06W0ZCV407YDE5WN",
+      "reportStatus": 404,
+      "pdfStatus": 404,
+      "browserUnavailable": true
+    },
+    {
+      "id": "01M5H52H8RQ4HG3MM49XD9PY9D",
+      "reportStatus": 404,
+      "pdfStatus": 404,
+      "browserUnavailable": true
+    },
+    {
+      "id": "01M5H6S2GRQN3QE1SGXXTB8DCN",
+      "reportStatus": 404,
+      "pdfStatus": 404,
+      "browserUnavailable": true
+    },
+    {
+      "id": "01M5HF2GF9788RGZZ9T5C0M9D0",
+      "reportStatus": 404,
+      "pdfStatus": 404,
+      "browserUnavailable": true
+    },
+    {
+      "id": "01M5HG0KNMR7RD9MV9716AHZCM",
+      "reportStatus": 404,
+      "pdfStatus": 404,
+      "browserUnavailable": true
+    },
+    {
+      "id": "01M5HG8RRQKVC43CKS9KN74R91",
+      "reportStatus": 404,
+      "pdfStatus": 404,
+      "browserUnavailable": true
+    }
+  ],
+  "screenshots": [
+    "local/review/cleanup-zero-dashboard.png",
+    "local/review/cleanup-zero-clients.png",
+    "local/review/cleanup-zero-projects.png",
+    "local/review/cleanup-zero-reports.png",
+    "local/review/cleanup-zero-shared.png",
+    "local/review/cleanup-zero-report-trash.png",
+    "local/review/cleanup-zero-trash.png",
+    "local/review/cleanup-old-public-link-unavailable.png"
+  ],
+  "existingAdministratorAuthenticated": true,
+  "visibleDashboardValues": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "noUncaughtStaffErrors": true,
+  "anonymousPrivateAccessStatus": 401,
+  "backendHealthStatus": 200
+}

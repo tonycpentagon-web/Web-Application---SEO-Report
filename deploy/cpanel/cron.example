@@ -1,0 +1,5 @@
+# Optional constrained cPanel cron, only if provider supports all subprocesses and this timeout.
+# Do NOT also run persistent workers against the same queues.
+* * * * * /usr/bin/flock -n /home/ACCOUNT/pentagon-worker.lock /usr/local/bin/php /home/ACCOUNT/pentagon/backend/artisan queue:work database --queue=documents,exports --stop-when-empty --max-time=50 --tries=1 --timeout=960 --memory=512 >> /home/ACCOUNT/private-logs/worker.log 2>&1
+* * * * * cd /home/ACCOUNT/pentagon/backend && /usr/local/bin/php artisan schedule:run >> /home/ACCOUNT/private-logs/scheduler.log 2>&1
+# --max-time limits between jobs, NOT a running 900-second extraction. Provider must permit the full job.

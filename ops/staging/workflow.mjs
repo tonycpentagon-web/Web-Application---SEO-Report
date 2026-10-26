@@ -1,0 +1,61 @@
+import {request} from '../../backend/pdf-renderer/node_modules/playwright/index.mjs';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+const root=path.resolve(process.env.STAGE8_ROOT||'.tools/stage8-local-windows');const base=process.env.STAGE8_URL||'http://127.0.0.1:8188';if(!['127.0.0.1','localhost'].includes(new URL(base).hostname))throw Error('Only localhost synthetic staging is allowed.');
+const credentials=JSON.parse(await fs.readFile(root+'/credentials.json','utf8'));const accounts=JSON.parse(await fs.readFile(root+'/accounts.json','utf8'));
+const prior=await fs.readFile(root+'/workflow-state.json','utf8').then(JSON.parse).catch(()=>({tenants:[]}));const checks=prior.checks||[],tenants=prior.tenants;const clients=[];
+const save=async()=>fs.writeFile(root+'/workflow-state.json',JSON.stringify({tenants,checks},null,2));
+async function call(ctx,method,url,data,expected=200,extra={}){const state=await ctx.storageState();const csrf=state.cookies.find(c=>c.name==='XSRF-TOKEN');const response=await ctx.fetch(url,{method,data,headers:{...(csrf?{'X-XSRF-TOKEN':decodeURIComponent(csrf.value)}:{}),...extra}});if(response.status()!==expected){let body=await response.text();throw Error(`${method} ${url} expected ${expected}, got ${response.status()}: ${body.slice(0,1500)}`);}return response.status()===204?null:response.json();}
+async function login(name){const ctx=await request.newContext({baseURL:base,ignoreHTTPSErrors:base.startsWith('https://'),extraHTTPHeaders:{Accept:'application/json',Origin:base,Referer:base+'/login'}});await ctx.get('/sanctum/csrf-cookie');await call(ctx,'POST','/login',{email:name+'@stage8.test',password:credentials.password});clients.push(ctx);return ctx;}
+async function waitFor(fn,label){const start=Date.now();for(let i=0;i<120;i++){const out=await fn();if(out)return {value:out,seconds:(Date.now()-start)/1000};await new Promise(r=>setTimeout(r,500));}throw Error('Timed out: '+label);}
+try {
+ const guest=await request.newContext({baseURL:base,ignoreHTTPSErrors:base.startsWith('https://'),extraHTTPHeaders:{Accept:'application/json'}});clients.push(guest);
+ await call(guest,'GET','/api/clients',undefined,401);await call(guest,'POST','/login',{email:'a@stage8.test',password:credentials.password},419);checks.push({check:'unauthenticated access and missing CSRF',status:'PASS'});
+ const rootCtx=await login('root');
+ if(!tenants.length) for(const name of ['a','b','c']){
+  const ctx=await login(name);const client=(await call(ctx,'POST','/api/clients',{name:'Test Client '+name.toUpperCase(),website:'https://example.test'},201)).data;
+  const project=(await call(ctx,'POST','/api/projects',{client_id:client.id,name:'Synthetic SEO '+name.toUpperCase(),website:'https://example.test',status:'active',reporting_frequency:'monthly'},201)).data;
+  const report=(await call(ctx,'POST',`/api/projects/${project.id}/reports`,{title:'Synthetic August 2026',reporting_month:'2026-08',kind:'monthly'},201)).data;
+  tenants.push({name,client:client.id,project:project.id,report:report.id,documents:[]});
+ }
+ await save();const owner=await login('a'),other=await login('b');const t=tenants[0],url=`/api/projects/${t.project}/reports/${t.report}`;
+ let exports=[];
+ if(!t.publication){
+ await call(rootCtx,'PUT',`/api/projects/${t.project}/team`,{manager_id:accounts.manager,member_ids:[accounts.executive]});
+ for(const suffix of ['', '/dashboard','/data','/documents','/delivery'])await call(other,'GET',url+suffix,undefined,404);checks.push({check:'cross-client project/report/dashboard/data/document/delivery IDs',status:'PASS'});
+ const files=['Keyword_Ranking.pdf','activities.docx','keywords.xlsx','channels.csv','key events.png'];const state=await owner.storageState();const csrf=state.cookies.find(c=>c.name==='XSRF-TOKEN');
+ if(!t.documents.length){
+ const multipart=new FormData();for(const n of files)multipart.append('files[]',new File([await fs.readFile(root+'/sources/'+n)],n));
+ const upload=await owner.post(url+'/documents',{headers:{'X-XSRF-TOKEN':decodeURIComponent(csrf.value)},multipart});assert.equal(upload.status(),201,await upload.text());const docs=(await upload.json()).data;t.documents=docs.map(d=>d.id);await save();
+ }
+ const extraction=await waitFor(async()=>{const statuses=await Promise.all(t.documents.map(id=>call(owner,'GET','/api/documents/'+id)));if(statuses.some(x=>x.data.extraction_status==='failed'))throw Error('Extraction failed: '+JSON.stringify(statuses.map(x=>({name:x.data.original_filename,status:x.data.extraction_status,error:x.data.current_run?.error_message}))));return statuses.every(x=>!['queued','processing'].includes(x.data.extraction_status))?statuses.map(x=>({name:x.data.original_filename,status:x.data.extraction_status})):null;},'extraction');checks.push({check:'five-file queued extraction',status:'PASS',...extraction});
+ await call(other,'GET','/api/documents/'+t.documents[0]+'/download',undefined,404);await call(other,'POST','/api/documents/'+t.documents[0]+'/retry',{},404);
+ const duplicate=new FormData();duplicate.append('files[]',new File([await fs.readFile(root+'/sources/channels.csv')],'again.csv'));assert.equal((await owner.post(url+'/documents',{headers:{'X-XSRF-TOKEN':decodeURIComponent(csrf.value)},multipart:duplicate})).status(),422);
+ if(!checks.some(c=>c.check==='actual normalization with retained source references')) await call(owner,'POST',url+'/data/normalize',{},202);const normalization=await waitFor(async()=>{const d=(await call(owner,'GET',url+'/data')).data;if(d.run?.status==='failed')throw Error(d.run.error_message);return d.run?.status==='completed'?d.counts:null;},'normalization');checks.push({check:'actual normalization with retained source references',status:'PASS',...normalization});
+ const rows=[];for(let p=1;;p++){const d=await call(owner,'GET',url+'/data/records?page='+p);rows.push(...d.data);if(p>=d.last_page)break;}
+ assert(rows.length);for(let r of rows.filter(r=>r.kind!=='unclassified')){assert(r.sources.length);if(r.review_status==='approved')continue;if(r.kind==='ai_visibility_evidence'&&r.data.brand_appearance==='unreviewed'){await call(owner,'PATCH',url+'/data/records/'+r.id,{revision:r.revision,review_status:'pending',data:{...r.data,brand_appearance:'absent',notes:'Generated fixture image contains event labels only; no brand is present.'},reason:'Inspected synthetic image: brand absent; source decision remains explicit.'});r=(await call(owner,'GET',url+'/data/records/'+r.id)).data;}const resolutions=(r.eligibility.warnings||[]).filter(w=>w.blocking).map(w=>({warning_id:w.id,reason:'Compared generated synthetic fixture and original asset; expected controlled test observation.'}));await call(owner,'POST',url+'/data/records/'+r.id+'/verification',{revision:r.revision,confirmed:true,reason:'Validated synthetic value and source against the generated fixture specification.',resolutions});const fresh=(await call(owner,'GET',url+'/data/records/'+r.id)).data;await call(owner,'PATCH',url+'/data/records/'+r.id,{revision:fresh.revision,review_status:'approved',reason:'Explicit isolated fixture approval after source verification.'});}
+ checks.push({check:'source verification and explicit synthetic approvals',status:'PASS',business_records:rows.filter(r=>r.kind!=='unclassified').length});
+ const summary=(await call(owner,'GET',url+'/summary')).data;const sections=Object.fromEntries(['website_traffic','organic_search','keywords','seo_work','ai_visibility','key_events'].map(k=>[k,'Synthetic fixture commentary: values checked against generated test sources; no real-client claims.']));
+ await call(owner,'POST',url+'/summary',{revision:0,source_fingerprint:summary.source_fingerprint,sections,reason:'Checked every section against synthetic source fixtures.',confirmed:true});await call(owner,'POST',url+'/delivery/commentary-approval',{revision:1,reason:'Checked the isolated synthetic commentary against its source specification.',confirmed:true});
+ const ready=(await call(owner,'GET',url+'/delivery')).data.readiness;await fs.writeFile(root+'/evidence/readiness.json',JSON.stringify(ready,null,2));assert.equal(ready.eligible,true,JSON.stringify(ready.reasons));
+ exports=[];for(const options of [{profile:'client_preview'},{profile:'internal_audit'},{profile:'client_preview',sections:['overview']}])exports.push((await call(owner,'POST',url+'/delivery/exports',{type:'draft',...options},202)).data.id);
+ for(const status of ['needs_review','approved']){const r=(await call(owner,'GET',url)).data;await call(owner,'PATCH',url+'/status',{status,version:r.version});}
+ const current=(await call(owner,'GET',url)).data;const published=(await call(owner,'POST',url+'/delivery/publish',{version:current.version,confirmed:true},201)).data;exports.push(published.export_id);t.publication=published.id;
+ const shared=(await call(owner,'POST',url+'/delivery/shares',{publication_id:published.id,label:'Synthetic share',expires_at:new Date(Date.now()+3600000).toISOString(),allow_download:true},201)).data;const token=shared.url.split('#')[1];assert(token);
+ await call(guest,'GET','/api/shared-report',undefined,200,{'X-Report-Token':token});await call(owner,'POST',url+'/delivery/shares/'+shared.id+'/revoke',{confirmed:true});await call(guest,'GET','/api/shared-report',undefined,404,{'X-Report-Token':token});checks.push({check:'publication and hashed share access/revocation',status:'PASS'});
+ }else{
+  const delivery=(await call(owner,'GET',url+'/delivery')).data;exports=delivery.exports.map(e=>e.id);
+  const shared=(await call(owner,'POST',url+'/delivery/shares',{publication_id:t.publication,label:'Synthetic revocation retest',expires_at:new Date(Date.now()+3600000).toISOString(),allow_download:true},201)).data;
+  const token=shared.url.split('#')[1];await call(guest,'GET','/api/shared-report',undefined,200,{'X-Report-Token':token});
+  await call(owner,'POST',url+'/delivery/shares/'+shared.id+'/revoke',{confirmed:true});await call(guest,'GET','/api/shared-report',undefined,404,{'X-Report-Token':token});
+  for(const link of delivery.links.filter(l=>!l.revoked_at))await call(owner,'POST',url+'/delivery/shares/'+link.id+'/revoke',{confirmed:true});
+  checks.push({check:'publication and hashed share access/revocation',status:'PASS'});
+ }
+ const concurrent=await Promise.all([1,2].map(()=>call(owner,'POST',url+'/delivery/exports',{type:'draft',profile:'client_preview'},202)));exports.push(...concurrent.map(x=>x.data.id));
+ const rendered=await waitFor(async()=>{const list=(await call(owner,'GET',url+'/delivery')).data.exports.filter(e=>exports.includes(e.id));if(list.some(e=>e.status==='failed'))throw Error('PDF failed');return list.length===exports.length&&list.every(e=>e.status==='completed')?list.map(e=>({id:e.id,profile:e.profile,type:e.type,bytes:e.file_size})):null;},'PDF exports');checks.push({check:'preview/audit/selected/published/concurrently submitted PDF exports',status:'PASS',...rendered});t.exports=exports;
+ await call(other,'GET',url+'/delivery/exports/'+exports[0]+'/download',undefined,404);const pdf=await owner.get(url+'/delivery/exports/'+exports[0]+'/download');assert.equal(pdf.status(),200);assert((await pdf.body()).subarray(0,5).toString()==='%PDF-');checks.push({check:'private PDF download and foreign denial',status:'PASS'});
+ const manager=await login('manager'),executive=await login('executive'),viewer=await login('viewer');for(const ctx of [manager,executive,viewer])await call(ctx,'GET','/api/system/health',undefined,403);
+ await call(viewer,'GET','/api/team',undefined,403);await call(executive,'POST',url+'/delivery/publish',{version:1,confirmed:true},403);await call(rootCtx,'POST','/api/system/health/probe',{});const health=(await call(rootCtx,'GET','/api/system/health')).data;checks.push({check:'privileged health and non-admin denial',status:'PASS',checks:health.checks,queues:health.queues});
+ await call(owner,'POST','/logout',{});await call(owner,'GET','/api/user',undefined,401);checks.push({check:'logout invalidates authenticated session',status:'PASS'});await save();console.log(JSON.stringify({checks,synthetic_tenants:tenants.length},null,2));
+}finally{await save();await Promise.all(clients.map(c=>c.dispose()));}

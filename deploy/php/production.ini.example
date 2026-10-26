@@ -1,0 +1,14 @@
+memory_limit=512M
+upload_max_filesize=25M
+post_max_size=110M
+max_file_uploads=10
+max_execution_time=90
+max_input_time=120
+display_errors=Off
+log_errors=On
+expose_php=Off
+session.cookie_secure=1
+session.cookie_httponly=1
+session.cookie_samesite=Lax
+; proc_open must remain available for the Python/Node subprocesses.
+; CLI workers require pcntl and their own Supervisor timeouts, independent of FPM request limits.

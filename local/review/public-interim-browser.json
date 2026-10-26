@@ -1,0 +1,218 @@
+[
+  {
+    "width": 1440,
+    "sections": [
+      "client-overview",
+      "client-website",
+      "client-search",
+      "client-keywords",
+      "client-activities",
+      "client-ai",
+      "client-events",
+      "client-summary",
+      "client-sources"
+    ],
+    "images": [
+      {
+        "loaded": true,
+        "width": 1021,
+        "height": 449,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 986,
+        "height": 530,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 949,
+        "height": 409,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 1014,
+        "height": 414,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 984,
+        "height": 433,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 895,
+        "height": 392,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 942,
+        "height": 457,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 994,
+        "height": 362,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 940,
+        "height": 432,
+        "fit": "contain"
+      }
+    ],
+    "errors": [],
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "sections": [
+      "client-overview",
+      "client-website",
+      "client-search",
+      "client-keywords",
+      "client-activities",
+      "client-ai",
+      "client-events",
+      "client-summary",
+      "client-sources"
+    ],
+    "images": [
+      {
+        "loaded": true,
+        "width": 1021,
+        "height": 449,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 986,
+        "height": 530,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 949,
+        "height": 409,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 1014,
+        "height": 414,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 984,
+        "height": 433,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 895,
+        "height": 392,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 942,
+        "height": 457,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 994,
+        "height": 362,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 940,
+        "height": 432,
+        "fit": "contain"
+      }
+    ],
+    "errors": [],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "sections": [
+      "client-overview",
+      "client-website",
+      "client-search",
+      "client-keywords",
+      "client-activities",
+      "client-ai",
+      "client-events",
+      "client-summary",
+      "client-sources"
+    ],
+    "images": [
+      {
+        "loaded": true,
+        "width": 1021,
+        "height": 449,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 986,
+        "height": 530,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 949,
+        "height": 409,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 1014,
+        "height": 414,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 984,
+        "height": 433,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 895,
+        "height": 392,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 942,
+        "height": 457,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 994,
+        "height": 362,
+        "fit": "contain"
+      },
+      {
+        "loaded": true,
+        "width": 940,
+        "height": 432,
+        "fit": "contain"
+      }
+    ],
+    "errors": [],
+    "overflow": false
+  }
+]

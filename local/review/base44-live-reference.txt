@@ -1,0 +1,456 @@
+Pentagon
+INFORMATION TECHNOLOGY
+
+PREPARED FOR HANN'S PHARMACY
+
+SEO Performance Report · August 2026
+
+Conversions, traffic analytics, AI visibility, keyword rankings and backlink activity in one report.
+
+CLIENT
+Hann's Pharmacy
+WEBSITE
+hannspharmacy.com
+REPORTING PERIOD
+1 Aug 2026 – 30 Aug 2026
+Save as PDF
+Pentagon
+Conversions
+Analytics
+AI Visibility
+Keywords
+Backlinks
+
+01 · CONVERSIONS
+
+Conversion events
+
+GRAND TOTAL
+
+97
+
+CONTACT_US
+
+37
+
+FORM_SUBMISSION
+
+30
+
+PHONE_CLICK
+
+17
+
+SCHEDULE_COMPRESSION_CLICKS
+
+9
+
+EMAIL_CLICK
+
+4
+
+Event count by event name
+
+0
+10
+20
+30
+40
+contact_us
+form_submission
+Phone_Click
+schedule_compression_clicks
+Email_Click
+37
+30
+17
+9
+4
+	EVENT NAME	EVENT COUNT
+1.	contact_us	37
+2.	form_submission	30
+3.	Phone_Click	17
+4.	schedule_compression_clicks	9
+5.	Email_Click	4
+	Grand total	97
+INSIGHT
+97 conversion events were recorded for 1 Aug 2026 – 30 Aug 2026. contact_us (37) and form_submission (30) were the two highest-count events, followed by Phone_Click (17), schedule_compression_clicks (9) and Email_Click (4).
+
+02 · ANALYTICS
+
+Traffic & search analytics
+Google Analytics 4
+
+TOTAL USERS
+
+4,515
+
+NEW USERS
+
+4,383
+
+AVERAGE SESSION DURATION
+
+00:01:23
+
+VIEWS
+
+6,257
+
+INSIGHT
+Google Analytics 4 recorded 4,515 total users, of which 4,383 were new users, with an average session duration of 00:01:23 and 6,257 views.
+Channel breakdown (Traffic channel grouping)
+SESSION DEFAULT CHANNEL GROUP	TOTAL USERS	NEW USERS
+Organic Search	2,871	2,752
+Direct	1,599	1,585
+Organic Social	23	23
+Referral	14	11
+AI Assistant	11	11
+Unassigned	5	1
+Grand total	4,515	4,383
+
+Total users vs new users by channel
+
+0
+750
+1500
+2250
+3000
+Organic Search
+Direct
+Organic Social
+Referral
+AI Assistant
+Unassigned
+2,871
+1,599
+23
+14
+11
+5
+2,752
+1,585
+23
+11
+11
+1
+Total usersNew users
+INSIGHT
+The Total Website Users are 4,515 of which 2,908 users are through Organic Search, Social & Video, and Referrals which are through SEO & Link Building Activities.
+Google Search Console
+
+CLICKS
+
+2,950
+
+IMPRESSIONS
+
+432,736
+
+SITE CTR
+
+0.68%
+
+INSIGHT
+Google Search Console reports 2,950 clicks from 432,736 impressions, for a site click-through rate of 0.68%.
+Device performance (User traffic based on devices)
+DEVICE CATEGORY	CLICKS	IMPRESSIONS
+MOBILE	2,396	334,256
+DESKTOP	525	95,921
+TABLET	29	2,559
+Grand total	2,950	432,736
+
+Clicks by device category
+
+MOBILE
+DESKTOP
+TABLET
+0
+600
+1200
+1800
+2400
+2,396
+525
+29
+INSIGHT
+The Total Website Clicks are 2,950 of which 2,396 users are through Mobile, 525 sers are through Desktop & 29 users are through Tablet, which are through SEO, Keyword Ranking & Link Building Activities.
+Top landing pages (Pagewise SERP clicks & impressions)
+LANDING PAGE	URL CLICKS	IMPRESSIONS	URL CTR
+https://hannspharmacy.com/how-to-measure-with-an-insulin-syringe/	2,288	381,728	0.6%
+https://hannspharmacy.com/wp-content/uploads/2020/09/Leuprolide_Dose_Card_v1.pdf	185	15,458	1.2%
+https://hannspharmacy.com/	157	2,369	6.63%
+https://hannspharmacy.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp	96	2,473	3.88%
+https://hannspharmacy.com/wp-content/uploads/2020/09/Patient-Guideline-for-Estradiol-Valerate-Injection_3c-1.pdf	36	4,004	0.9%
+https://hannspharmacy.com/cetrotide/	23	1,300	1.77%
+https://hannspharmacy.com/menopur/	19	4,132	0.46%
+https://hannspharmacy.com/fertility-medication/fertility-medication-discount-programs/	17	2,132	0.8%
+https://hannspharmacy.com/compounded-medication/	15	1,425	1.05%
+https://hannspharmacy.com/leuprolide/	14	2,379	0.59%
+https://hannspharmacy.com/pregnyl-injection-video/	12	3,063	0.39%
+https://hannspharmacy.com/omnitrope/	10	2,248	0.44%
+https://hannspharmacy.com/ovidrel/	9	506	1.78%
+https://hannspharmacy.com/contact-us/	8	1,012	0.79%
+https://hannspharmacy.com/about/our-fertility-pharmacists/	6	204	2.94%
+https://hannspharmacy.com/portfolio-items/compression/	6	466	1.29%
+https://hannspharmacy.com/progesterone/	5	223	2.24%
+https://hannspharmacy.com/fertility-medication/	4	1,027	0.39%
+https://hannspharmacy.com/financing/	4	476	0.84%
+https://hannspharmacy.com/pregnyl/	4	473	0.85%
+INSIGHT
+The page with the most clicks was /how-to-measure-with-an-insulin-syringe/ with 2,288 clicks from 381,728 impressions (0.6% CTR). The homepage (https://hannspharmacy.com/) recorded 157 clicks from 2,369 impressions, a 6.63% CTR — the highest CTR in the table.
+
+03 · AI VISIBILITY
+
+AI search visibility
+
+TRACKED AI QUERIES
+
+9
+
+AI MODE RESULTS
+
+5
+
+AI OVERVIEW RESULTS
+
+4
+
+HANN'S PHARMACY VISIBLE
+
+9 of 9
+
+#1
+AI Mode
+Named in AI answer
+Fertility Pharmacy
+
+Hann's Pharmacy is named in the AI Mode answer with its business listing (4.6 rating, 83 reviews, Fairfax, VA) and appears in two of the source cards.
+
+#2
+AI Mode
+Top local pick
+Fertility Specialty Pharmacy in Virginia
+
+The AI Mode answer presents Hann's Pharmacy under "My Top Local Pick" and lists it as the first source card.
+
+#3
+AI Overview
+Named in AI answer
+Fertility Medication Pharmacy
+
+The AI Overview lists Hann's Pharmacy among the top fertility pharmacies and shows it as a source card.
+
+#4
+AI Mode
+Cited as source
+Best Fertility Pharmacy
+
+Hann's Pharmacy appears as the second source card beside the AI Mode answer; the captured portion of the answer text does not name it.
+
+#5
+AI Mode
+Top local pick
+Fertility Meds Pharmacy
+
+The AI Mode answer names Hann's Pharmacy as "My Top Local Pick" in Fairfax and shows it in the source cards.
+
+#6
+AI Overview
+Cited as source
+Fertility Medication Compounding
+
+Hann's Pharmacy is cited in the AI Overview under Alternative Administration and appears as a source card (Best Compounding Medication Pharmacy Virginia).
+
+#7
+AI Overview
+Cited as source
+Best Pharmacy for Compounded Medications
+
+In the captured AI Overview, Hann's Pharmacy appears as a source card (Best Compounding Medication Pharmacy Virginia); the visible answer text lists other pharmacies.
+
+#8
+AI Mode
+Cited as source
+Compounding Pharmacies in Virginia
+
+Hann's Pharmacy appears in the AI Mode source panel; the captured answer text highlights other Virginia pharmacies.
+
+#9
+AI Overview
+Named in AI answer
+Compounded Fertility Medications Virginia
+
+Hann's Pharmacy is the first pharmacy listed in the AI Overview (4.6 rating, 83 reviews, Fairfax, VA) and appears in two source cards.
+
+Visibility tags describe how Hann's Pharmacy appears in each screenshot: "Top local pick" (recommended by the AI answer), "Named in AI answer" (listed in the answer text) and "Cited as source" (shown in the AI source cards).
+
+INSIGHT
+AI visibility shows where Hann's Pharmacy appears inside Google's AI Mode and AI Overview answers for the tracked queries. It is evidence of presence in AI search results, and is separate from website traffic and conversions, which are reported in the Analytics and Conversions sections.
+
+04 · KEYWORDS
+
+Keyword rankings
+Keywords
+SL. NO.	KEYWORDS	RANKING
+1	Fertility Pharmacy	1st Page
+2	Fertility Specialty Pharmacy	1st Page
+3	Fertility Medication Pharmacy	1st Page
+4	Fertility Drug Pharmacy	1st Page
+5	Pharmacy fertility drugs	1st Page
+6	Fertility Pharmacies	1st Page
+7	Best Fertility Pharmacy	1st Page
+8	Fertility Pharmacy Services	1st Page
+9	Infertility Medication Pharmacy	1st Page
+10	Fertility Meds Pharmacy	1st Page
+11	Fertility Medication Compounding	1st Page
+12	Compounding Medications Pharmacy	1st Page
+13	Best Pharmacy For Compounded Medications	1st Page
+14	Pharmacy Medication Compounding	2nd Page
+15	Online Fertility pharmacy	3rd Page
+16	Compounding Pharmacies in Virginia	3rd Page
+17	Virginia Womens Health
+Virginia Women's Health and Wellness	1st Page
+18	Womens Center For Health And Wellness
+Womens Pharmacy For Health And Wellness Virginia	1st Page
+19	Center For Womens Health And Wellness
+Pharmacy For Womens Health And Wellness Virginia	1st Page
+20	Womens Health And Wellness Center
+Womens Health And Wellness Center Virginia	1st Page
+Extra keywords
+SL. NO.	EXTRA KEYWORDS	RANKING
+1	Fertility Medications Virginia	1st Page
+2	Fertility Pharmacy Virginia	1st Page
+3	Fertility Pharmacist Virginia	1st Page
+4	Compounded Fertility Medications Virginia	1st Page
+5	Fertility Pharmacist	1st Page
+6	Compounding Fertility Pharmacy Virginia	1st Page
+7	Fertility Pharmacies Virginia	1st Page
+8	Fertility Medication Compounding Services	1st Page
+9	Fertility Meds Pharmacy Virginia	1st Page
+10	Fertility Specialty Pharmacy Virginia	1st Page
+11	Best Fertility Pharmacy Virginia	1st Page
+12	Online Fertility Pharmacy Virginia	1st Page
+13	Fertility Medication Services Virginia	1st Page
+14	Fertility Pharmacies Virginia	1st Page
+15	Fertility Medication Consultations	1st Page
+16	Fertility Medication Provider Virginia	1st Page
+17	Fertility Support Medications Virginia	1st Page
+18	Fertility Medication Provider	1st Page
+19	Best Fertility Pharmacy In Virginia	1st Page
+20	Fertility Pharmacy Consultation	1st Page
+21	Fertility Compounding Virginia	1st Page
+22	Advanced Fertility Pharmacy Virginia	1st Page
+23	Professional Fertility Meds Solutions Virginia	1st Page
+24	Best Compounded Medications Virginia	1st Page
+25	Virginia Compounded Fertility Medications	1st Page
+26	Virginia Fertility Pharmacy	1st Page
+27	Fertility Compounding Pharmacy Virginia	1st Page
+28	Infertility Pharmacy Virginia	1st Page
+29	Trusted Fertility Pharmacy Virginia	1st Page
+30	Fertility Medication Services	1st Page
+31	Best Compounded Fertility Medications Virginia	1st Page
+32	Compounding Fertility Medication Virginia	1st Page
+33	Fertility Treatment Medications Virginia	1st Page
+34	Fertility Compounding Pharmacy	1st Page
+35	Compounding Fertility Pharmacy	1st Page
+36	Online Fertility Medications Virginia	1st Page
+37	Fertility Compounding Services	1st Page
+38	Best Pharmacy For Fertility Medications	1st Page
+39	Advanced Fertility Pharmacy	1st Page
+40	Top Compounding Pharmacy	1st Page
+41	Fertility Medication Consultations Virginia	1st Page
+42	Top Womens Health Pharmacy Virginia	1st Page
+43	Womens Wellness Pharmacy Care Virginia	1st Page
+44	Womens Health Pharmacy Virginia	1st Page
+45	Best Compounded Medications Pharmacy Virginia	1st Page
+46	Fertility Medications Pharmacy	1st Page
+47	Top Compounded Medications Virginia	1st Page
+48	Fertility Medications Pharmacy Virginia	1st Page
+49	Fertility Compounded Medications Virginia	1st Page
+50	Fertility Compounding Services Virginia	1st Page
+
+05 · BACKLINKS
+
+Off-page backlink activity
+
+TOTAL SUBMITTED URLS
+
+95
+
+ARTICLE SUBMISSION
+
+10
+
+PROFILE CREATION
+
+30
+
+GUEST POST
+
+10
+
+SOCIAL BOOKMARKING
+
+30
+
+PPT SUBMISSION
+
+10
+
+IMAGE SUBMISSION
+
+5
+
+Article Submission
+10 URLs
+1
+https://medium.com/@alikhan12/how-to-choose-a-safe-and-trusted-online-fertility-pharmacy-84dd9c97ac4a
+2
+https://www.linkedin.com/pulse/why-more-doctors-recommend-compounding-medication-pharmacy-john-snow-5sybe
+3
+https://penzu.com/p/63b9832a2bea3602
+4
+https://lace-cantaloupe-8bd.notion.site/Virginia-Womens-Health-Why-Regular-Wellness-Exams-Are-Essential-for-Every-Woman-3b414e784497802c92cfcb9923724ca5?source=copy_link
+5
+https://147509040.hs-sites-eu1.com/blog/how-to-find-a-trusted-compounding-medications-pharmacy-near-you
+6
+https://writeupcafe.com/why-doctors-recommend-pharmacy-medication-compounding-for-personalised-treatment
+7
+https://ext-6999224.livejournal.com/2876.html
+8
+https://www.whizolosophy.com/category/other-relationships/article-essay/how-to-avoid-fake-fertility-medications-when-buying-online
+9
+https://diigo.com/013ccbw
+10
+https://graph.org/What-to-Expect-When-Using-Pharmacy-Fertility-Drugs-for-IVF-or-IUI-08-28
+Profile Creation
+30 URLs
+Guest Post
+10 URLs
+Social Bookmarking
+30 URLs
+PPT Submission
+10 URLs
+Image Submission
+5 URLs
+INSIGHT
+Off-page work for August 2026 comprised 95 submitted URLs across 6 categories: Article Submission (10), Profile Creation (30), Guest Post (10), Social Bookmarking (30), PPT Submission (10), Image Submission (5). These are the URLs submitted by Pentagon as listed in the SEO Work Report; the report does not confirm whether each one is a live, indexed backlink. Repeated URLs are shown exactly as supplied.
+Thank you, Hann's Pharmacy
+
+Thank you for investing in SEO for your website with Pentagon.
+
+Pentagon INFORMATION TECHNOLOGY
+
+Contact
+Pentagon
+P. O. Box: 30036 Abu Dhabi
+Phone & Fax
+Tel: 971-2-6413920
+Fax: 971-2-6413992
+Email
+info@pentame.com
+Web
+www.pentame.com
+Edit with
+600

@@ -1,0 +1,23 @@
+FROM node:22-bookworm-slim AS node
+FROM composer:2 AS composer
+FROM php:8.4-fpm-bookworm
+COPY --from=node /usr/local/bin/node /usr/local/bin/node
+COPY --from=node /usr/local/lib/node_modules /usr/local/lib/node_modules
+RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm && ln -s /usr/local/lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx
+COPY --from=composer /usr/bin/composer /usr/local/bin/composer
+RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-venv tesseract-ocr libzip-dev libonig-dev libxml2-dev libsqlite3-dev git unzip curl fonts-dejavu-core && docker-php-ext-install pdo_mysql pdo_sqlite mbstring zip dom pcntl && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+COPY backend /app/backend
+COPY document-processor /app/document-processor
+COPY ops/staging /app/ops/staging
+ENV APP_ENV=staging APP_DEBUG=false DOCUMENT_PYTHON=/opt/venv/bin/python DOCUMENT_OCR_ENGINE=tesseract DOCUMENT_TESSERACT=/usr/bin/tesseract PDF_NODE_BINARY=/usr/local/bin/node PLAYWRIGHT_BROWSERS_PATH=/opt/ms-playwright LOCAL_PRIVATE_ROOT=/private
+RUN python3 -m venv /opt/venv && /opt/venv/bin/pip install --no-cache-dir -r document-processor/requirements.txt pytesseract==0.3.13
+WORKDIR /app/backend
+RUN composer install --no-interaction --prefer-dist --no-scripts && npm --prefix pdf-renderer ci --omit=dev && cd pdf-renderer && npx playwright install --with-deps chromium
+RUN mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs bootstrap/cache /private /runtime && chown -R www-data:www-data storage bootstrap/cache /private /runtime && chmod -R a+rX /opt/ms-playwright
+COPY deploy/staging-local/php.ini /usr/local/etc/php/conf.d/stage8.ini
+COPY deploy/staging-local/entrypoint.sh /usr/local/bin/stage8-entrypoint
+RUN chmod +x /usr/local/bin/stage8-entrypoint
+USER www-data
+ENTRYPOINT ["stage8-entrypoint"]
+CMD ["php-fpm", "-F"]

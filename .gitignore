@@ -1,0 +1,55 @@
+/.tools/
+**/node_modules/
+**/vendor/
+**/.env
+**/.env.*
+!**/.env.example
+**/dist/
+**/coverage/
+**/*.log
+**/__pycache__/
+**/.venv/
+/backend/database/*.sqlite*
+/backend/.phpunit.result.cache
+**/*.tsbuildinfo
+
+# Private client/runtime data and operational backups
+/backend/storage/app/private/
+/backend/storage/app/public/
+/backend/storage/framework/
+/backend/storage/logs/
+/backend/bootstrap/cache/*.php
+**/auth.json
+**/*.sqlite
+**/*.sqlite3
+**/*.sqlite-*
+**/*.sql
+**/*.sql.gz
+**/*.dump
+**/backups/
+**/.backups/
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/*.tar
+**/*.tar.gz
+**/*.tgz
+**/*.zip
+**/.pytest_cache/
+**/.mypy_cache/
+**/venv/
+**/env/
+/reference-files/
+/design-reference/
+/releases/
+# Sanitized examples are intentionally tracked; review them for real values before committing.
+!**/*.env.example
+
+# The deploy/env directory contains reviewed examples, not a Python virtual environment.
+!/deploy/env/
+!/deploy/env/*.env.example
+**/*.pdf
+
+# Synthetic monthly workflow fixtures contain no client source data.
+!/backend/tests/fixtures/monthly/*.pdf

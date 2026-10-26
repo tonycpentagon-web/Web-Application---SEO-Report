@@ -1,0 +1,2 @@
+import fs from 'node:fs/promises';import assert from 'node:assert/strict';
+const link=JSON.parse(await fs.readFile('local/review/hanns-public-link-v2.json','utf8'));const r=await fetch('http://127.0.0.1:8000/api/public-report?pdf=1',{headers:{'X-Report-Token':link.url.split('#')[1]}});assert.equal(r.status,200);const bytes=Buffer.from(await r.arrayBuffer());assert.equal(bytes.subarray(0,5).toString(),'%PDF-');await fs.writeFile('local/review/hanns-public-corrected.pdf',bytes);console.log(JSON.stringify({anonymousPdf200:true,bytes:bytes.length}));

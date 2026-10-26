@@ -1,0 +1,4 @@
+# Linux crontab examples; do not install until paths/user/permissions are reviewed.
+* * * * * cd /srv/pentagon/current/backend && /usr/bin/php artisan schedule:run >> /srv/pentagon/shared/logs/scheduler.log 2>&1
+# Schedule the encrypted backup script separately under a privileged service account.
+# 0 2 * * * /srv/pentagon/current/ops/backup-production.sh

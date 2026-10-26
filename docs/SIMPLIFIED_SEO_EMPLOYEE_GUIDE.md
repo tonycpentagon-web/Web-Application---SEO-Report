@@ -1,0 +1,20 @@
+# Simplified SEO reporting — employee guide
+
+Open http://127.0.0.1:5173/login and sign in with your own employee account.
+
+1. **Create Client**, then **New Project**, once per website. An administrator sets up clients/projects and assigns SEO Managers and SEO Executives. Assigned employees can create, generate, edit commentary and share their monthly reports.
+2. Choose **Create Monthly Report**, select the existing project and month, then continue to upload. Each month has separate originals, data and share links; an existing month cannot be overwritten by creating a duplicate.
+3. Select PDF, JPG/JPEG, PNG, XLSX, CSV or DOCX sources together. Click **Generate SEO Report**. Files upload, extract and normalize in the background. Keep the page open to see progress; the finished Draft opens automatically. Returning later also provides a Preview link.
+4. Read the Draft. Tables support searching, sorting, filters and pagination. Charts show only reported observations. Missing values are never estimated. Only sections with data appear. Source files stay private and retain their evidence locations.
+5. Optionally return to **Sources & optional edits**, open **Optional: edit report summary**, edit and save. Regenerating the report preserves existing manual commentary; after source changes, update that commentary or explicitly choose **Generate source summary**.
+6. Click **Share Report**. Clean reports need no manager, record, commentary or publication approval. For uncertain OCR, inferred mappings, incomplete extraction or unknown source dates, read the grouped disclosures and acknowledge them once. They remain visible in the published report and PDF. Provisional is not human-verified.
+7. Contradictory metrics, explicit wrong-client/website sources, changed evidence and reporting-period conflicts cannot be acknowledged away. The sharing screen explains the issue. Replace/remove the affected source or correct the month, then generate again. No per-record approval campaign is needed.
+8. Set an optional expiration (blank means 30 days), click **Share Report**, then **Copy Link**. The client opens the interactive published version without signing in. PDF preparation continues in the background. Download when ready, or retry a failed PDF from Sharing.
+9. The report moves automatically to **Generated / Shared**. Use **Copy Report Link**, **Download PDF**, **Revoke Link**, or **Create next month** there. Revocation/expiration stops the affected URL; other separately created links stay active.
+
+A shared link opens a fixed snapshot. Editing/reprocessing historical source records does not rewrite an already published version. To amend a published report, use a separately managed revision; do not overwrite its snapshot. Originals and employee/admin pages are never publicly served through the report link.
+
+For a Draft, use source document details to replace a file, or Actions to remove it and regenerate. Monthly report Actions support archive, Trash and restore for report authors and project managers. Administrators manage the Trash list and permanent deletion. Filing a published report preserves active links. Moving a report to Trash revokes its links; restoring does not reactivate revoked links. Permanent deletion is restricted by permissions, retention and active-link safeguards. Changes to one month do not reset another month.
+
+The local loopback URL works on this computer. Clients outside this computer will need the later approved HTTPS hosting setup. No public deployment was made.
+The sharing screen distinguishes stale checks from changed sources. Use **Refresh report checks** when the completed generation still matches the originals; use **Regenerate Report** only when files, extraction or report dates changed. A report can include explicitly disclosed partial-month source coverage after one employee assignment confirmation. The printed dates and missing days remain visible publicly and in the PDF; another-month contradictions cannot be acknowledged away. See [Hann's period fix and evidence](HANNS_SHARE_PERIOD_FIX.md).

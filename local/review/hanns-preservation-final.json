@@ -1,0 +1,9 @@
+{
+  "same_document_rows_and_source_ids": true,
+  "original_files_intact": true,
+  "documents": 20,
+  "clients_projects_unchanged": true,
+  "unrelated_months_unchanged": true,
+  "source_values_overrides_and_review_decisions_preserved": true,
+  "human_verification_history_unchanged": true
+}

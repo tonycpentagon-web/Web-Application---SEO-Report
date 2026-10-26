@@ -1,0 +1,3 @@
+﻿from pathlib import Path
+p=Path('backend/app/Services/SourceReportingPeriod.php');s=p.read_text(encoding='utf-8');s=s.replace("$method=$piece->content_type==='ocr_text'||in_array($piece->confidence_status,['ocr','uncertain','low','inferred','ambiguous'])?'ocr':'native';", "$method=$piece->content_type==='ocr_text'||$piece->confidence_status==='ocr'?'ocr':'native';\n            $reliableNative=$method==='native'&&!in_array($piece->confidence_status,['uncertain','low','inferred','ambiguous']);")
+s=s.replace("$entry['reliable']=$method==='native'&&($labelled||$index<30);", "$entry['reliable']=$reliableNative&&($labelled||$index<30);").replace("'reliable'=>$method==='native'", "'reliable'=>$reliableNative");p.write_text(s,encoding='utf-8')

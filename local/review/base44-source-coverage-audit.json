@@ -1,0 +1,38 @@
+[
+  {
+    "document": "Advanced_Properties-_Website_Analytics_Report-_September-39_2026.pdf",
+    "actor_id": 1,
+    "recorded_at": "2026-10-22 09:43:52",
+    "source_fingerprint": "da7105eabadbf8c90209506bddac876329739ab1a5cfb719abc513567e28827f",
+    "original_checksum": "69e4a07b9f18376e86281a277a41a2ff55ab55e9c4d6e68fb815921c023f3b03",
+    "decision": {
+      "type": "explicit_actual_source_coverage",
+      "ranges": [
+        {
+          "start": "2026-08-29",
+          "end": "2026-09-27"
+        }
+      ],
+      "selected_month": "2026-09",
+      "disclosure": "Employee explicitly selected these actual source dates for this reporting bundle. Values are not calendar-month totals. No missing days or OCR values are verified or estimated."
+    }
+  },
+  {
+    "document": "Advanced_Properties-Key_Events_September_26..png",
+    "actor_id": 1,
+    "recorded_at": "2026-10-22 09:49:51",
+    "source_fingerprint": "973cab4e1cc49f370bea4167f49d6d5b9eef96565f972167a1d4bee5e21534d9",
+    "original_checksum": "2ea957f47f56b20cc6ebc57db9a14243d9fe5fb9dcf4717ce139a5fc4afccc7e",
+    "decision": {
+      "type": "explicit_actual_source_coverage",
+      "ranges": [
+        {
+          "start": "2026-08-29",
+          "end": "2026-09-27"
+        }
+      ],
+      "selected_month": "2026-09",
+      "disclosure": "Employee explicitly selected these actual source dates for this reporting bundle. Values are not calendar-month totals. No missing days or OCR values are verified or estimated."
+    }
+  }
+]

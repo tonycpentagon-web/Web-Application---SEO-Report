@@ -1,0 +1,2 @@
+# Source checkout is private. Use the documented loopback servers or a public-only vhost.
+Require all denied
